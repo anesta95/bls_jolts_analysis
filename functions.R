@@ -473,6 +473,9 @@ econ_csv_write_out <- function(df, folder) {
 
 save_chart <- function(plt) {
   
+  bsky_width <- 600
+  bsky_height <- 335
+  
   plt_df <- plt$data
   
   data_date <- as.character(max(plt_df$date, na.rm = T))
@@ -483,7 +486,7 @@ save_chart <- function(plt) {
   
   name <- str_flatten(c(data_date, unname(data_details)), "-")
   
-  name_clean <- str_replace_all(name, "\\s+", "_")
+  name_clean <- paste0(str_replace_all(name, "\\s+", "_"), ".png")
   
   message(paste0("Writing out ", name_clean, " chart..."))
   ggsave(
@@ -491,8 +494,8 @@ save_chart <- function(plt) {
     plot = plt,
     device = "png",
     path = "./charts/",
-    width = 600 * 6,
-    height = 335 * 6,
+    width = bsky_width * 6, # The aspect ratio can be adjusted as necessary.
+    height = bsky_height * 6,
     units = "px"
   )
 }
