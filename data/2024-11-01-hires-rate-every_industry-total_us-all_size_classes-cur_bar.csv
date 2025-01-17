@@ -1,0 +1,13 @@
+date,value,dataelement_text,ratelevel_text,industry_text,state_text,sizeclass_text,val_type_text
+2024-11-01,5.533333333333334,Hires,Rate,Leisure and hospitality,Total US,All size classes,cur_bar
+2024-11-01,4.366666666666666,Hires,Rate,Professional and business services,Total US,All size classes,cur_bar
+2024-11-01,4.066666666666666,Hires,Rate,Other services,Total US,All size classes,cur_bar
+2024-11-01,3.9,Hires,Rate,Construction,Total US,All size classes,cur_bar
+2024-11-01,3.6999999999999997,Hires,Rate,"Trade, transportation, and utilities",Total US,All size classes,cur_bar
+2024-11-01,3.4,Hires,Rate,Total nonfarm,Total US,All size classes,cur_bar
+2024-11-01,3.3333333333333335,Hires,Rate,Mining and logging,Total US,All size classes,cur_bar
+2024-11-01,3.1999999999999997,Hires,Rate,Private education and health services,Total US,All size classes,cur_bar
+2024-11-01,2.566666666666667,Hires,Rate,Information,Total US,All size classes,cur_bar
+2024-11-01,2.5,Hires,Rate,Manufacturing,Total US,All size classes,cur_bar
+2024-11-01,2.033333333333333,Hires,Rate,Financial activities,Total US,All size classes,cur_bar
+2024-11-01,1.5333333333333332,Hires,Rate,Government,Total US,All size classes,cur_bar

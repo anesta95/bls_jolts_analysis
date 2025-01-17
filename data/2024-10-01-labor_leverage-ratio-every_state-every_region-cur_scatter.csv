@@ -1,0 +1,52 @@
+date,dataelement_text,ratelevel_text,state_text,Layoffs Rate,Quits Rate,state_abb,fips_code,region_text,val_type_text
+2024-10-01,Labor Leverage,Ratio,Alaska,1.7,3.5,AK,02,West,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Idaho,1.5333333333333332,2.766666666666667,ID,16,West,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Montana,1.5,2.8666666666666667,MT,30,West,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Wyoming,1.5,2.9666666666666663,WY,56,West,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Louisiana,1.4666666666666668,2.3666666666666667,LA,22,South,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Rhode Island,1.4666666666666668,2.1999999999999997,RI,44,Northeast,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Utah,1.4000000000000001,2.1666666666666665,UT,49,West,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Vermont,1.4000000000000001,2.1,VT,50,Northeast,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Arkansas,1.3333333333333333,2.233333333333333,AR,05,South,cur_scatter
+2024-10-01,Labor Leverage,Ratio,South Carolina,1.3333333333333333,2.466666666666667,SC,45,South,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Maine,1.3,2.1,ME,23,Northeast,cur_scatter
+2024-10-01,Labor Leverage,Ratio,New Hampshire,1.3,1.7,NH,33,Northeast,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Colorado,1.2666666666666666,2.1666666666666665,CO,08,West,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Nevada,1.2666666666666666,2.2333333333333334,NV,32,West,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Michigan,1.2333333333333334,2.1333333333333333,MI,26,Midwest,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Oregon,1.2333333333333334,2.2333333333333334,OR,41,West,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Tennessee,1.2333333333333334,2.433333333333333,TN,47,South,cur_scatter
+2024-10-01,Labor Leverage,Ratio,West Virginia,1.2333333333333334,2.5,WV,54,South,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Arizona,1.2,2.3333333333333335,AZ,04,West,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Georgia,1.2,2.1333333333333333,GA,13,South,cur_scatter
+2024-10-01,Labor Leverage,Ratio,New Jersey,1.2,1.4000000000000001,NJ,34,Northeast,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Connecticut,1.1666666666666667,1.8,CT,09,Northeast,cur_scatter
+2024-10-01,Labor Leverage,Ratio,North Dakota,1.1666666666666667,2.3666666666666667,ND,38,Midwest,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Oklahoma,1.1333333333333335,2.5666666666666664,OK,40,South,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Delaware,1.1333333333333333,2.2666666666666666,DE,10,South,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Hawaii,1.1333333333333333,1.9666666666666668,HI,15,West,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Nebraska,1.1333333333333333,2.033333333333333,NE,31,Midwest,cur_scatter
+2024-10-01,Labor Leverage,Ratio,South Dakota,1.1,2.3666666666666667,SD,46,Midwest,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Texas,1.1,2.033333333333333,TX,48,South,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Illinois,1.0999999999999999,1.8666666666666665,IL,17,Midwest,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Indiana,1.0999999999999999,2.733333333333333,IN,18,Midwest,cur_scatter
+2024-10-01,Labor Leverage,Ratio,New Mexico,1.0999999999999999,2.0666666666666664,NM,35,West,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Washington,1.0999999999999999,1.7333333333333334,WA,53,West,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Mississippi,1.0666666666666667,2.433333333333333,MS,28,South,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Ohio,1.0666666666666667,2.0666666666666664,OH,39,Midwest,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Kansas,1.0333333333333334,2.1,KS,20,Midwest,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Kentucky,1.0333333333333334,2.1333333333333333,KY,21,South,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Maryland,1.0333333333333334,2.1,MD,24,South,cur_scatter
+2024-10-01,Labor Leverage,Ratio,North Carolina,1.0333333333333334,1.8,NC,37,South,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Pennsylvania,1.0333333333333334,1.9000000000000001,PA,42,Northeast,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Florida,1,2.4,FL,12,South,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Missouri,1,2.066666666666667,MO,29,Midwest,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Virginia,1,2.1333333333333333,VA,51,South,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Alabama,0.9666666666666667,2.1999999999999997,AL,01,South,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Iowa,0.9666666666666667,1.9666666666666668,IA,19,Midwest,cur_scatter
+2024-10-01,Labor Leverage,Ratio,New York,0.9333333333333332,1.6666666666666667,NY,36,Northeast,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Wisconsin,0.9333333333333332,1.9000000000000001,WI,55,Midwest,cur_scatter
+2024-10-01,Labor Leverage,Ratio,California,0.9,1.6666666666666667,CA,06,West,cur_scatter
+2024-10-01,Labor Leverage,Ratio,District of Columbia,0.8666666666666667,1.7,DC,11,South,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Minnesota,0.8333333333333334,2.1666666666666665,MN,27,Midwest,cur_scatter
+2024-10-01,Labor Leverage,Ratio,Massachusetts,0.7333333333333334,1.3666666666666665,MA,25,Northeast,cur_scatter

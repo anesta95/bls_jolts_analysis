@@ -1,0 +1,52 @@
+state_text,state_abb,fips_code,region_text
+Alaska,AK,02,West
+Idaho,ID,16,West
+Montana,MT,30,West
+Wyoming,WY,56,West
+Louisiana,LA,22,South
+Rhode Island,RI,44,Northeast
+Utah,UT,49,West
+Vermont,VT,50,Northeast
+Arkansas,AR,05,South
+South Carolina,SC,45,South
+Maine,ME,23,Northeast
+New Hampshire,NH,33,Northeast
+Colorado,CO,08,West
+Nevada,NV,32,West
+Michigan,MI,26,Midwest
+Oregon,OR,41,West
+Tennessee,TN,47,South
+West Virginia,WV,54,South
+Arizona,AZ,04,West
+Georgia,GA,13,South
+New Jersey,NJ,34,Northeast
+Connecticut,CT,09,Northeast
+North Dakota,ND,38,Midwest
+Oklahoma,OK,40,South
+Delaware,DE,10,South
+Hawaii,HI,15,West
+Nebraska,NE,31,Midwest
+South Dakota,SD,46,Midwest
+Texas,TX,48,South
+Illinois,IL,17,Midwest
+Indiana,IN,18,Midwest
+New Mexico,NM,35,West
+Washington,WA,53,West
+Mississippi,MS,28,South
+Ohio,OH,39,Midwest
+Kansas,KS,20,Midwest
+Kentucky,KY,21,South
+Maryland,MD,24,South
+North Carolina,NC,37,South
+Pennsylvania,PA,42,Northeast
+Florida,FL,12,South
+Missouri,MO,29,Midwest
+Virginia,VA,51,South
+Alabama,AL,01,South
+Iowa,IA,19,Midwest
+New York,NY,36,Northeast
+Wisconsin,WI,55,Midwest
+California,CA,06,West
+District of Columbia,DC,11,South
+Minnesota,MN,27,Midwest
+Massachusetts,MA,25,Northeast

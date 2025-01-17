@@ -1,0 +1,59 @@
+# BLS Job Openings and Labor Turnover Survey Analysis
+
+This project contains code that downloads, analyzes, and visualizes data
+from the [Job Openings and Labor Turnover Survey](https://www.bls.gov/jlt/) (JOLTS) 
+that is run monthly by the U.S. Department of Labor's Bureau of Labor Statistics. 
+
+Data analysis and visualization is executed by the [R](https://www.r-project.org/) 
+code in the `analysis.R` and `functions.R` files in the top-level directory.
+Project libraries and other resources needed to run the code can be managed through 
+the [renv](https://rstudio.github.io/renv/) reproducible environment in the `renv`
+folder and `renv.lock` and `.Rprofile` files in the top-level directory.
+
+Details about data measures and data and graphics files are provided below.
+
+## Data Measures
+
+This project currently analyzes the following [data estimates](https://www.bls.gov/opub/hom/jlt/concepts.htm) from JOLTS:
+
+* __Job openings__: includes all positions that are open on the last business day of the reference month. A job is open only if it meets all three of these conditions:
+  * A specific position exists and there is work available for that position. The position can be full-time or part-time, and it can be permanent, short-term, or seasonal.
+  * The job could start within 30 days, whether or not the employer can find a suitable candidate during that time.
+  * The employer is actively recruiting workers from outside the establishment to fill the position. Active recruiting means that the establishment is taking steps to fill a position. It may include advertising in news­papers, on television, or on the radio; posting internet notices, posting “help wanted” signs, networking or making word-of-mouth announcements; accepting applications; interviewing candidates; contacting employment agencies; or soliciting employees at job fairs, state or local employment offices, or similar sources.
+* __Hires__: include all additions to the payroll during the entire reference month, including new and rehired employees; full-time and part-time employees, permanent, short-term, and seasonal employees; employees who were recalled to a job at the location following a layoff (formal suspension from pay status) lasting more than 7 days; on-call or intermittent employees who returned to work after having been formally separated; workers who were hired and separated during the month, and transfers from other locations.
+* __Quits__: include employees who left voluntarily with the exception of retirements or transfers to other locations.
+* __Layoffs and discharges__: include involuntary separations initiated by the employer including layoffs with no intent to rehire; layoffs (formal suspension from pay status) lasting or expected to last more than 7 days; discharges resulting from mergers, downsizing, or closings; firings or other discharges for cause; terminations of permanent or short-term employees; and terminations of seasonal employees (whether or not they are expected to return the next season).
+* __Unemployment persons per job opening__: The [unemployed people per job opening ratio](https://www.bls.gov/opub/btn/volume-11/what-is-the-unemployed-people-per-job-openings-ratio-a-21-year-case-study-into-unemployment-trends.htm) is constructed by taking the number of unemployed people and dividing it by the number of job openings each month. These two components come from two different BLS surveys. The number of unemployed people is an estimate that comes from the [Current Population Survey](https://www.bls.gov/cps/) (CPS); the Local Area Unemployment Statistics (LAUS) program models CPS data to produce unemployment estimates for states. The job openings data for national and state estimates are from the Job Openings and Labor Turnover Survey (JOLTS).
+* __Labor Leverage__: The [labor leverage ratio](https://www.bls.gov/opub/btn/volume-7/measuring-employer-and-employee-confidence-in-the-economy.htm) is the number of voluntary separations (quits) divided by the number involuntary separations (layoffs and discharges). This ratio provides a measure to gauge employers’ and employees’ confidence in the economy. A value greater than 1.0 (when quits exceed layoffs and discharges) indicates that employee confidence is strong, while a value less than 1.0 (when layoffs and discharges exceed quits) indicates that employees are not so confident.
+
+Each data measure visualized in this project in this project is the [measure rate](https://www.bls.gov/help/def/jt.htm#rate/level) rather than measure level. The job openings rate is computed by dividing the number of job openings by the sum of employment and job openings and multiplying that quotient by 100. The other data element rates (hires, quits, layoffs and discharges) are computed by dividing the data element level by employment and multiplying that quotient by 100. 
+
+## Data Files and Graphics
+
+### Naming conventions
+All graphics are PNG files in the `charts` directory. Every data visualization 
+has a corresponding CSV file that was used to create it in the `data` folder.
+Both CSVs and PNGs are named with the following format where each aspect of the 
+data is delimited with a dash `-` and spaces are replaced with underscores `_`:
+
+CSV file example: `2024-11-01-hires-rate-total_nonfarm-total_us-all_size_classes-ts_line.csv`
+PNG file example: `2024-11-01-hires-rate-total_nonfarm-total_us-all_size_classes-ts_line.png`
+
+### Included data
+
+| Variable Name     | Variable Data Type | Variable Description                                                                                                                                                                                                                                                                                                                                                |
+| ----------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| date              | Date               | Date associated with data row. Will be in \`YYYY-MM-DD\` format. Monthly data will automatically be coded as the first day of said month, i.e. January 2025 is \`2025-01-01\`                                                                                                                                                                                       |
+| value             | numeric            | The actual numerical value of data that is denoted by the\`dataelement_text\`, \`ratelevel_text\`, and \`val_type_text\` columns. \*This figure is \__not_ \_ included in the data or chart filenames.\*                                                                                                                                                            |
+| value_trail_three | numeric            | The trailing three-month average of the \`value\` column. \*This is only present in data files with a \`val_type_text\` of \`ts_line\` since those are the only visualizations that contain \__both_ \_ raw and three-month trailing average values. This figure is \__not_ \_ included in the data or chart filenames.\*                                           |
+| dataelement_text  | character          | The [data element](https://download.bls.gov/pub/time.series/jt/jt.dataelement) that is represented by the \`value\` column. One of \`hires\`, \`job openings\`, \`labor leverage ratio\`, \`layoffs and discharges\`, \`quits\`, or \`unemployed persons per job opening ratio\`.                                                                                   |
+| ratelevel_text    | character          | The description of the what the numerical value the data in the \`value\` column is measuring. One of \`rate\`, \`ratio\`, or \`level\`.                                                                                                                                                                                                                            |
+| industry_text     | character          | The [NAICS supersector](https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm) that the data is associated with. If every separate supersector is included, the data and chart filename will denote \`every_industry\`.                                                                                                               |
+| state_text        | character          | The [U.S. state](https://download.bls.gov/pub/time.series/jt/jt.state) that the data is associated with. If every separate state is included, the data and chart filename will denote \`every_state\`.                                                                                                                                                              |
+| Layoffs Rate      | numeric            | The actual numeric value of the layoffs rate associated with the data. \*This figure is only present in data files with a \`val_type_text\` of \`cur_scatter\`. This figure is \__not_ \_ included in the data or chart filenames.\*                                                                                                                                |
+| Quits Rate        | numeric            | The actual numeric value of the quits rate associated with the data. \*This figure is only present in data files with a \`val_type_text\` of \`cur_scatter\`. This figure is \__not_ \_ included in the data or chart filenames.\*                                                                                                                                  |
+| sizeclass_text    | character          | The [firm size class](https://download.bls.gov/pub/time.series/jt/jt.sizeclass) that the data is associated with. If every separate firm size class is included, the data and chart filename will denote \`every_sizeclass\`.                                                                                                                                       |
+| state_abb         | character          | The two character [USPS state abbreviation](https://www.bls.gov/respondents/mwr/electronic-data-interchange/appendix-d-usps-state-abbreviations-and-fips-codes.htm) that the data is associated with. \*This figure is only present in data files with a \`val_type_text\` of \`cur_scatter\`. This figure is \__not_ \_ included in the data or chart filenames.\* |
+| fips_code         | character          | The two digit [FIPS code](https://www.bls.gov/respondents/mwr/electronic-data-interchange/appendix-d-usps-state-abbreviations-and-fips-codes.htm) that the data is associated with. \*This figure is only present in data files with a \`val_type_text\` of \`cur_scatter\`. This figure is \__not_ \_ included in the data or chart filenames.\*                   |
+| region_text       | character          | The U.S. region the data is associated with as defined by the [U.S. Census Bureau](https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf). \*This figure is only present in data files with a \`val_type_text\` of \`cur_scatter\`.\*                                                                                                             |
+| val_type_text     | character          | The visualization type the data is used for. One of \`ts_line\`, \`cur_bar\`, \`yoy_bar\`, \`cur_map\`, \`yoy_map\`, or \`cur_scatter\` which stand for time series line chart, current bar chart, year-over-year bar chart, current map, year-over-year map, and current scatter plot.                                                                             |
