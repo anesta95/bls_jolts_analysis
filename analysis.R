@@ -44,7 +44,7 @@ naics_supersectors <- c(
 )
 
 # Basic viz caption citation:
-base_viz_caption <- "Source: BLS Job Openings and Labor Turnover Survey | Chart: Adrian Nesta"
+base_viz_caption <- "Seasonally adjusted as of MMM. 'YY\nSource: BLS Job Openings and Labor Turnover Survey | Chart: Adrian Nesta"
 
 # State name, abbreviation, and FIPS reference file
 us_state_name_abb_fips <- read_csv("./reference_files/us_state_name_abb_fips.csv",
@@ -161,8 +161,8 @@ hi_jo_ld_qu_uo_ts_viz_list <- map2(
     x_col = date,
     y_col_one = value,
     y_col_two = value_trail_three,
-    viz_subtitle = "<b style=\"color: #a6cee3\">Latest</b> and <b style = \"color: #1f78b4\">3 month trailing average</b><br>Seasonally adjusted as of",
-    viz_caption = paste0("Non-recession average for data since Dec. '00.\n",
+    viz_subtitle = "<b style=\"color: #a6cee3\">Latest</b> and <b style = \"color: #1f78b4\">3 month trailing average</b>",
+    viz_caption = paste("Non-recession average for data since Dec. '00.",
                          base_viz_caption)
     )
   )
@@ -206,9 +206,9 @@ ll_plt <- make_ts_trail_three_chart(
   x_col = date,
   y_col_one = value,
   y_col_two = value_trail_three,
-  viz_subtitle = "<b style=\"color: #a6cee3\">Latest</b> and <b style = \"color: #1f78b4\">3 month trailing average</b><br>Seasonally adjusted as of",
-  viz_caption = paste0("Non-recession average for data since Dec. '00.\n",
-                       base_viz_caption) 
+  viz_subtitle = "<b style=\"color: #a6cee3\">Latest</b> and <b style = \"color: #1f78b4\">3 month trailing average</b>",
+  viz_caption = paste("Non-recession average for data since Dec. '00.",
+                      base_viz_caption) 
   )
 
 # Adding black horizontal line at 1 value on y-axis to highlight even
@@ -285,7 +285,7 @@ hi_jo_ld_ll_qu_naics_ss_cur_viz_list <- map(
     viz_df = .x,
     x_col = value,
     y_col = industry_text,
-    viz_subtitle = "Trailing 3 month average.\nSeasonally adjusted as of",
+    viz_subtitle = "Trailing 3 month average.",
     viz_caption = base_viz_caption
     )
   )
@@ -318,7 +318,7 @@ hi_jo_ld_ll_qu_naics_ss_yoy_viz_list <- map(
     viz_df = .x,
     x_col = value,
     y_col = industry_text,
-    viz_subtitle = "Year-over-year change of trailing 3 month average.\nSeasonally adjusted as of",
+    viz_subtitle = "Year-over-year change of trailing 3 month average.",
     viz_caption = base_viz_caption
     )
   )
@@ -393,7 +393,7 @@ hi_jo_ld_ll_qu_state_cur_viz_list <- map(
     shp_df = us_states_and_dc_shp,
     fill_col = value,
     geo_col = geometry,
-    viz_subtitle = "Trailing 3 month average.\nSeasonally adjusted as of",
+    viz_subtitle = "Trailing 3 month average.",
     viz_caption = base_viz_caption
     
     )
@@ -431,7 +431,7 @@ hi_jo_ld_ll_qu_state_yoy_viz_list <- map(
     shp_df = us_states_and_dc_shp,
     fill_col = value,
     geo_col = geometry,
-    viz_subtitle = "Trailing 3 month average.\nSeasonally adjusted as of",
+    viz_subtitle = "Year-over-year change of trailing 3 month average.",
     viz_caption = base_viz_caption
     )
   )
@@ -483,9 +483,9 @@ ld_qu_state_cur_plt <- make_state_scatter(
   x_intercept = national_qu_for_states,
   y_intercept = national_ld_for_states,
   viz_title = "Labor Leverage Ratio by State",
-  viz_subtitle = "Dashed lines are national averages. Seasonally adjusted as of",
-  viz_caption = paste0(
-    "Data are trailing three-month averages of Quits and Layoffs & Discharges Rates.\n",
+  viz_subtitle = "Trailing three-month averages of Quits and Layoffs Rates.",
+  viz_caption = paste(
+    "Dashed lines are national averages.",
     base_viz_caption
   )
   )

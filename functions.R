@@ -208,6 +208,9 @@ make_ts_trail_three_chart <- function(viz_df, avg_line, x_col,
   latest_date_dte <- max(viz_df$date, na.rm = T)
   latest_date_str <- format(latest_date_dte, "%b. '%y")
   
+  # Creating final viz caption
+  viz_caption_full <- str_replace(viz_caption, "MMM. 'YY", latest_date_str)
+  
   annotate_offset <- (max(viz_df$value) - min(viz_df$value)) / 18
   
   plt <- ggplot(viz_df, mapping = aes(x = !!x_col_quo)) +
@@ -237,10 +240,8 @@ make_ts_trail_three_chart <- function(viz_df, avg_line, x_col,
     scale_y_continuous() +
     labs(
       title = viz_title,
-      subtitle = paste(
-        viz_subtitle, 
-        latest_date_str),
-      caption = viz_caption
+      subtitle = viz_subtitle,
+      caption = viz_caption_full
     ) +
     ts_line_theme()
   
@@ -260,6 +261,9 @@ make_bar <- function(viz_df, x_col, y_col, viz_title = NULL,
   
   latest_date <- format(unique(viz_df$date), "%b. '%y")
   
+  # Creating final viz caption
+  viz_caption_full <- str_replace(viz_caption, "MMM. 'YY", latest_date)
+  
   plt <- ggplot(viz_df, aes(x = !!x_col_quo, 
                           y = reorder(!!y_col_quo, !!x_col_quo),
                           fill = !!x_col_quo)) + 
@@ -271,10 +275,8 @@ make_bar <- function(viz_df, x_col, y_col, viz_title = NULL,
     scale_fill_steps(low = "#e5f5e0", high = "#31a354", guide = "none") +
     labs(
       title = viz_title,
-      subtitle = paste(
-        viz_subtitle, 
-        latest_date),
-      caption = viz_caption
+      subtitle = viz_subtitle,
+      caption = viz_caption_full
     ) +
     bar_theme()
   
@@ -290,6 +292,9 @@ make_yoy_bar <- function(viz_df, x_col, y_col, viz_title = NULL,
   
   viz_title <- make_chart_title(viz_df, viz_title)
   latest_date <- format(unique(viz_df$date), "%b. '%y")
+  
+  # Creating final viz caption
+  viz_caption_full <- str_replace(viz_caption, "MMM. 'YY", latest_date)
   
   ggplot(viz_df, aes(x = !!x_col_quo, 
                      y = reorder(!!y_col_quo, !!x_col_quo),
@@ -309,10 +314,8 @@ make_yoy_bar <- function(viz_df, x_col, y_col, viz_title = NULL,
                       high = "#01665e", midpoint = 0, guide = "none") +
     labs(
       title = viz_title,
-      subtitle = paste(
-        viz_subtitle, 
-        latest_date),
-      caption = viz_caption
+      subtitle = viz_subtitle,
+      caption = viz_caption_full
     ) +
     bar_theme()
 }
@@ -331,6 +334,9 @@ make_cur_map <- function(viz_df, shp_df, fill_col, geo_col,
   viz_title <- make_chart_title(viz_df, viz_title)
   latest_date <- format(unique(full_df$date), "%b. '%y")
   
+  # Creating final viz caption
+  viz_caption_full <- str_replace(viz_caption, "MMM. 'YY", latest_date)
+  
   plt <- ggplot(data = full_df, mapping = aes(geometry = !!geo_col_quo, 
                                               fill = !!fill_col_quo)) +
     geom_sf() +
@@ -340,10 +346,8 @@ make_cur_map <- function(viz_df, shp_df, fill_col, geo_col,
                          guide = "colourbar") +
     labs(
       title = viz_title,
-      subtitle = paste(
-        viz_subtitle,
-        latest_date),
-      caption = viz_caption
+      subtitle = viz_subtitle,
+      caption = viz_caption_full
     ) + 
     map_theme()
   
@@ -365,6 +369,9 @@ make_yoy_map <- function(viz_df, shp_df, fill_col, geo_col,
   viz_title <- make_chart_title(viz_df, viz_title)
   latest_date <- format(unique(full_df$date), "%b. '%y")
   
+  # Creating final viz caption
+  viz_caption_full <- str_replace(viz_caption, "MMM. 'YY", latest_date)
+  
   plt <- ggplot(data = full_df, mapping = aes(geometry = !!geo_col_quo, 
                                               fill = !!fill_col_quo)) +
     geom_sf() +
@@ -376,10 +383,8 @@ make_yoy_map <- function(viz_df, shp_df, fill_col, geo_col,
     ) +
     labs(
       title = viz_title,
-      subtitle = paste(
-        viz_subtitle,
-        latest_date),
-      caption = viz_caption
+      subtitle = viz_subtitle,
+      caption = viz_caption_full
     ) + 
     map_theme()
   
@@ -401,6 +406,9 @@ make_state_scatter <- function(viz_df, x_col, y_col, color_col,
   
   viz_title <- make_chart_title(viz_df, viz_title)
   latest_date <- format(unique(viz_df$date), "%b. '%y")
+  
+  # Creating final viz caption
+  viz_caption_full <- str_replace(viz_caption, "MMM. 'YY", latest_date)
   
   plt <- ggplot(viz_df, aes(x = !!x_col_quo, 
                                  y = !!y_col_quo)) +
@@ -440,10 +448,8 @@ make_state_scatter <- function(viz_df, x_col, y_col, color_col,
              fontface = "bold") + 
     labs(
       title = viz_title,
-      subtitle = paste(
-        viz_subtitle, 
-        latest_date),
-      caption = viz_caption
+      subtitle = viz_subtitle,
+      caption = viz_caption_full
     ) +
     scatter_theme()
 }
