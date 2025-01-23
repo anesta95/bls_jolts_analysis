@@ -17,14 +17,17 @@ library(ggrepel)
 source("functions.R")
 
 ### Objects Needed ###
+# API Keys
+con <- file(description = ".api_keys/fred.txt", open = "rt", blocking = F)
+FRED_API_KEY <- readLines(con, n = 1)
+close(con)
+
 # Vector of the dates of the recessionary periods defined by the NBER from here:
 # https://fred.stlouisfed.org/series/USREC
-# TODO: Write function to use FRED API to programmatically get these for the future
-recession_dates <- c(
-  seq.Date(base::as.Date("2001-04-01"), base::as.Date("2001-11-01"), "month"),
-  seq.Date(base::as.Date("2008-01-01"), base::as.Date("2009-06-01"), "month"),
-  seq.Date(base::as.Date("2020-03-01"), base::as.Date("2020-04-01"), "month")
-)
+recession_dates_df <- get_fred_data("USREC", FRED_API_KEY)
+
+recession_dates <- filter(recession_dates_df, value == 1L) %>% 
+  pull(date)
 
 # Vector of the six-digit NAICS codes for the BLS supersectors:
 # https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm

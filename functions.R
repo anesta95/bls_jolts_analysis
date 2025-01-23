@@ -81,6 +81,33 @@ make_chart_title <- function(viz_df, viz_title) {
 }
 
 ## Data gathering functions ##
+# Function to retrieve data from FRED API
+get_fred_data <- function(series_id, api_key) {
+  # API doc reference: https://fred.stlouisfed.org/docs/api/fred/series_observations.html
+  fred_res <- GET(
+    url = paste0(
+    "https://api.stlouisfed.org/fred/series/observations?series_id=",
+    series_id, "&api_key=", api_key, "&file_type=json"
+      )
+    )
+  
+  stop_for_status(fred_res)
+  
+  fred_content <- content(fred_res, 
+                          as = "parsed", 
+                          type = "application/json",
+                          encoding = "UTF-8")
+  
+  fred_observations <- fred_content$observations
+  
+  fred_data <- bind_rows(fred_observations) %>% 
+    mutate(across(matches("realtime|date"), base::as.Date),
+           value = as.double(value))
+  
+  return(fred_data)
+  
+}
+
 # Function to make HTTP GET requests with a provided email in the `user-agent`
 # request header to the BLS database and parses returned data as TSVs.
 get_bls_data <- function(url, email) {
