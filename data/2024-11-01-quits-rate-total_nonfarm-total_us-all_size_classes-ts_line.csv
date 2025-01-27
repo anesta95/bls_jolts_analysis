@@ -1,16 +1,4 @@
 date,value,value_trail_three,dataelement_text,ratelevel_text,industry_text,state_text,sizeclass_text,val_type_text
-2019-11-01,2.3,2.3000000000000003,Quits,Rate,Total nonfarm,Total US,All size classes,ts_line
-2019-12-01,2.3,2.3000000000000003,Quits,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-01-01,2.3,2.3000000000000003,Quits,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-02-01,2.3,2.3000000000000003,Quits,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-03-01,1.9,2.1666666666666665,Quits,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-04-01,1.5,1.9000000000000001,Quits,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-05-01,1.7,1.7000000000000002,Quits,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-06-01,1.9,1.7000000000000002,Quits,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-07-01,2.2,1.9333333333333336,Quits,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-08-01,2.1,2.066666666666667,Quits,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-09-01,2.2,2.166666666666667,Quits,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-10-01,2.3,2.2,Quits,Rate,Total nonfarm,Total US,All size classes,ts_line
 2020-11-01,2.3,2.266666666666667,Quits,Rate,Total nonfarm,Total US,All size classes,ts_line
 2020-12-01,2.4,2.3333333333333335,Quits,Rate,Total nonfarm,Total US,All size classes,ts_line
 2021-01-01,2.3,2.3333333333333335,Quits,Rate,Total nonfarm,Total US,All size classes,ts_line

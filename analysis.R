@@ -143,7 +143,16 @@ hi_jo_ld_qu_uo_df_list <- jolts_full %>%
 # Creating list of non-recession averages of all measures in the list of data frames
 hi_jo_ld_qu_uo_non_recession_avg_list <- map(hi_jo_ld_qu_uo_df_list, 
                                              ~get_avg_col_val(
-                                               .x, recession_dates))
+                                               .x, recession_dates, value, "exclusive"))
+
+# Creating list of non-recession averages of all measures in the list of data frames
+hi_jo_ld_qu_uo_recession_avg_list <- map(hi_jo_ld_qu_uo_df_list, 
+                                             ~get_avg_col_val(
+                                               .x, recession_dates, value, "inclusive"))
+# Combining these lists
+hi_jo_ld_qu_uo_avg_list <- map2(
+  hi_jo_ld_qu_uo_non_recession_avg_list, 
+  hi_jo_ld_qu_uo_recession_avg_list, ~c(.x, .y))
 
 # Editing data frame list to calculate a trailing three month average column and
 # filter dates to only past five years.
@@ -154,20 +163,29 @@ hi_jo_ld_qu_uo_ts_df_list <- map(hi_jo_ld_qu_uo_df_list,
 # to a CSV
 walk(hi_jo_ld_qu_uo_ts_df_list, ~econ_csv_write_out(.x, "./data"))
 
+
 # Making a list of ggplot line charts from the list of time series data frames
 hi_jo_ld_qu_uo_ts_viz_list <- map2(
   hi_jo_ld_qu_uo_ts_df_list, 
-  hi_jo_ld_qu_uo_non_recession_avg_list, 
-  ~make_ts_trail_three_chart(
-    viz_df = .x, 
-    avg_line = .y, 
-    x_col = date,
-    y_col_one = value,
-    y_col_two = value_trail_three,
-    viz_subtitle = "<b style=\"color: #a6cee3\">Latest</b> and <b style = \"color: #1f78b4\">3 month trailing average</b>",
-    viz_caption = paste("Non-recession average for data since Dec. '00.",
-                         base_viz_caption)
+  hi_jo_ld_qu_uo_avg_list,
+  function(x, y) {
+    non_rec_avg <- y[1]
+    rec_avg <- y[2]
+    
+    make_ts_line_chart(
+      viz_df = x,
+      x_col = date,
+      y_col_one = value_trail_three,
+      second_y_col = T,
+      y_col_two = value,
+      rec_avg_line = rec_avg,
+      non_rec_avg_line = non_rec_avg,
+      y_data_type = "number",
+      viz_subtitle = "<b style=\"color: #a6cee3\">Latest</b> and <b style = \"color: #1f78b4\">3 month trailing average</b>",
+      viz_caption = paste("Average lines for data since Dec. '00.",
+                          base_viz_caption)
     )
+  }
   )
 
 # Saving list of ggplot line charts to PNGs
@@ -193,7 +211,13 @@ ll_df <- jolts_full %>%
 
 # Getting non-recession average of labor leverage ratio of from entire range of 
 # JOLTS data
-ll_non_recession_avg <- get_avg_col_val(ll_df, recession_dates)
+ll_non_recession_avg <- get_avg_col_val(ll_df, recession_dates, value, "exclusive")
+
+# Getting recession average of labor leverage ratio of from entire range of 
+# JOLTS data
+ll_recession_avg <- get_avg_col_val(ll_df, recession_dates, value, "inclusive")
+
+ll_avg <- c(ll_non_recession_avg, ll_recession_avg)
 
 # Making data frame with column of trailing three-month average of labor leverage
 # ratio
@@ -203,16 +227,19 @@ ll_ts_df <- make_viz_df_trail_three(ll_df)
 econ_csv_write_out(ll_ts_df, "./data")
 
 # Making labor leverage ratio time series line chart
-ll_plt <- make_ts_trail_three_chart(
+ll_plt <- make_ts_line_chart(
   viz_df = ll_ts_df,
-  avg_line = ll_non_recession_avg,
   x_col = date,
-  y_col_one = value,
-  y_col_two = value_trail_three,
+  y_col_one = value_trail_three,
+  second_y_col = T,
+  y_col_two = value,
+  rec_avg_line = ll_avg[2],
+  non_rec_avg_line = ll_avg[1],
+  y_data_type = "number",
   viz_subtitle = "<b style=\"color: #a6cee3\">Latest</b> and <b style = \"color: #1f78b4\">3 month trailing average</b>",
-  viz_caption = paste("Non-recession average for data since Dec. '00.",
-                      base_viz_caption) 
-  )
+  viz_caption = paste("Average lines for data since Dec. '00.",
+                      base_viz_caption)
+)
 
 # Adding black horizontal line at 1 value on y-axis to highlight even
 # labor leverage ratio. Values above 1 show more employee optimism about labor
@@ -317,7 +344,7 @@ walk(hi_jo_ld_ll_qu_naics_ss_yoy_df_list, ~econ_csv_write_out(.x, "./data"))
 # Making a list of ggplot YoY bar charts from the list of data frames
 hi_jo_ld_ll_qu_naics_ss_yoy_viz_list <- map(
   hi_jo_ld_ll_qu_naics_ss_yoy_df_list, 
-  ~make_yoy_bar(
+  ~make_pct_chg_bar(
     viz_df = .x,
     x_col = value,
     y_col = industry_text,
@@ -429,7 +456,7 @@ walk(hi_jo_ld_ll_qu_state_yoy_df_list, ~econ_csv_write_out(.x, "./data"))
 # for each dataframe in the list
 hi_jo_ld_ll_qu_state_yoy_viz_list <- map(
   hi_jo_ld_ll_qu_state_yoy_df_list, 
-  ~make_yoy_map(
+  ~make_pct_chg_map(
     viz_df = .x,
     shp_df = us_states_and_dc_shp,
     fill_col = value,

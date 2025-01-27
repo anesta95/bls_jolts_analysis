@@ -5,21 +5,6 @@
 # Function to reverse %in% R Operator
 `%nin%` <- function(x, y) !(x %in% y)
 
-# Function to split character vector of label names at an appropriate point for
-# visualizations
-split_str <- function(str) {
-  midpoint <- nchar(str) / 2
-  
-  spaces <- str_locate_all(str, "\\s+")[[1]][, 1]
-  
-  half_space_idx <- which.min(abs(spaces - midpoint))
-  
-  space_replace <- spaces[half_space_idx]
-  
-  str_sub(str, start = space_replace, end = space_replace) <- "\n"
-  
-  return(str)
-}
 
 # Function that takes in data frame of columns with metadata on specific
 # details of data or chart and returns a vector of lower-case values for each
@@ -43,22 +28,33 @@ make_metadata_vec <- function(df) {
   return(metadata_vec)
 }
 
-# Function to get average value from a vector of numeric data types
-get_avg_col_val <- function(df, dts) {
-  avg <- df %>% 
-    filter(date %nin% dts) %>% 
-    pull(value) %>% 
-    mean()
+# Function to get average value from a vector of numeric data types after 
+# filtering out data values.
+get_avg_col_val <- function(df, dts, val_col, filter_type) {
+  
+  val_col_name <- enquo(val_col)
+  
+  if (filter_type == "inclusive") {
+    df_filtered <- df %>% 
+      filter(date %in% dts)
+  } else {
+    df_filtered <- df %>% 
+      filter(date %nin% dts)
+  }
+  
+  avg <- df_filtered %>% 
+    pull(!!val_col_name) %>% 
+    mean(na.rm = T)
   
   return(avg)
 }
 
 # Function that add a trailing three-month average column to a data frame
 # with a numeric column named `value`. It will also filter the data frame
-# to only rows that contain dates within the last 60 months
+# to only rows that contain dates within the last 48 months
 make_viz_df_trail_three <- function(df) {
   
-  ts_jolts_beginning_month <- max(df$date, na.rm = T) %m-% months(60)
+  ts_jolts_beginning_month <- max(df$date, na.rm = T) %m-% months(48)
   
   viz_df <- df %>% 
     mutate(value_trail_three = rollmean(value, 3, fill = NA, align = "right")) %>% 
@@ -80,16 +76,32 @@ make_chart_title <- function(viz_df, viz_title) {
   return(viz_title)
 }
 
+# Function to add 13% of numeric difference in vector of dates to latest date
+# in vector for annotation for dashed line recession & non-recession averages.
+get_x_annotation_val <- function(diff, dte) {
+  x_ann <- base::as.Date(as.numeric(dte) + (.13 * diff))
+  return(x_ann)
+}
+
+# Function to add on 10% on each side of the range of a numerical vector
+get_data_range <- function(vec) {
+  simple_range <- range(vec, na.rm = T)
+  highest_extra <- simple_range[2] + (abs(simple_range[2]) * .1)
+  lowest_extra <- simple_range[1] - (abs(simple_range[1]) * .1)
+  extra_range <- c(lowest_extra, highest_extra)
+  return(extra_range)
+}
+
 ## Data gathering functions ##
 # Function to retrieve data from FRED API
 get_fred_data <- function(series_id, api_key) {
   # API doc reference: https://fred.stlouisfed.org/docs/api/fred/series_observations.html
   fred_res <- GET(
     url = paste0(
-    "https://api.stlouisfed.org/fred/series/observations?series_id=",
-    series_id, "&api_key=", api_key, "&file_type=json"
-      )
+      "https://api.stlouisfed.org/fred/series/observations?series_id=",
+      series_id, "&api_key=", api_key, "&file_type=json"
     )
+  )
   
   stop_for_status(fred_res)
   
@@ -152,7 +164,7 @@ ts_line_theme <- function() {
     theme(
       panel.grid.major.y = element_line(color = "gray", linewidth = 0.3),
       plot.title = element_text(size = 36, face = "bold", color = "black"),
-      plot.margin = margin(20, 30, 20, 20, "pt"),
+      plot.margin = margin(20, 100, 20, 20, "pt"),
       plot.subtitle = element_markdown(size = 24, color = "black"),
       plot.caption = element_text(size = 10, color = "black"),
       axis.text = element_text(size = 18, face = "bold", color = "black"),
@@ -221,56 +233,106 @@ scatter_theme <- function() {
 
 # Function to make the dual current and trailing three-month average
 # line time-series plots.
-make_ts_trail_three_chart <- function(viz_df, avg_line, x_col, 
-                                      y_col_one, y_col_two,
-                                      viz_title = NULL, viz_subtitle, viz_caption) {
+make_ts_line_chart <- function(viz_df, x_col, y_col_one, second_y_col = F,
+                               y_col_two = NULL, rec_avg_line, 
+                               non_rec_avg_line, y_data_type,
+                               viz_title = NULL, viz_subtitle, viz_caption) {
   # https://www.tidyverse.org/blog/2018/07/ggplot2-tidy-evaluation/
   # Quoting X and Y variables:
   x_col_quo <- enquo(x_col)
   y_col_one_quo <- enquo(y_col_one)
-  y_col_two_quo <- enquo(y_col_two)
   
   viz_title <- make_chart_title(viz_df, viz_title)
   
+  # Getting data range to use for annotation calculations
+  data_range <- get_data_range(pull(viz_df, !!y_col_one_quo))
+  
   latest_date_dte <- max(viz_df$date, na.rm = T)
+  earliest_date_dte <- min(viz_df$date, na.rm = T)
+  # Getting dashed recession/non-recession average line offset
+  num_data_dte_range_diff <- diff(as.numeric(range(viz_df$date, na.rm = T)))
+  x_ann <- get_x_annotation_val(num_data_dte_range_diff, latest_date_dte)
+  
   latest_date_str <- format(latest_date_dte, "%b. '%y")
   
   # Creating final viz caption
   viz_caption_full <- str_replace(viz_caption, "MMM. 'YY", latest_date_str)
   
-  annotate_offset <- (max(viz_df$value) - min(viz_df$value)) / 18
   
+  # Base plt
   plt <- ggplot(viz_df, mapping = aes(x = !!x_col_quo)) +
+    coord_cartesian(
+      xlim = c(earliest_date_dte, latest_date_dte),
+      clip = "off") +
     geom_line(mapping = aes(y = !!y_col_one_quo),
-              linewidth = 0.8,
-              color = "#a6cee3", 
-              lineend = "round",
-              linejoin = "bevel") +
-    geom_line(mapping = aes(y = !!y_col_two_quo),
               linewidth = 2.75,
               color = "#1f78b4", 
               lineend = "round",
               linejoin = "bevel") +
-    geom_hline(yintercept = avg_line,
-               color = "black",
-               linewidth = 0.75,
-               linetype = "dashed"
-    ) +
-    annotate("text", 
-             x = latest_date_dte %m-% months(5), 
-             y = avg_line + annotate_offset, 
-             label = "Non-recession avg.",
-             color = "black",
-             size = 5,
-             fontface = "bold") +
-    scale_x_date(date_breaks = "1 year", date_labels = "%b. '%y") +
-    scale_y_continuous() +
+    scale_x_date(date_labels = "%b. '%y") +
     labs(
       title = viz_title,
       subtitle = viz_subtitle,
       caption = viz_caption_full
     ) +
     ts_line_theme()
+  
+  # Adding in second smaller line if specified
+  if (second_y_col) {
+    y_col_two_quo <- enquo(y_col_two)
+    # Replacing the data range with the more volatile mom annualized column
+    second_line_data_range <- get_data_range(pull(viz_df, !!y_col_two_quo))
+    data_range <- range(data_range, second_line_data_range)
+    plt <- plt + geom_line(mapping = aes(y = !!y_col_two_quo),
+                           linewidth = 0.8,
+                           color = "#a6cee3", 
+                           lineend = "round",
+                           linejoin = "bevel")
+    
+  }
+  
+  if (between(non_rec_avg_line, data_range[1], data_range[2])) {
+    plt <- plt + geom_hline(yintercept = non_rec_avg_line,
+                            color = "black",
+                            linewidth = 0.75,
+                            linetype = "dashed"
+    ) + annotate("text",
+                 x = x_ann,
+                 y = non_rec_avg_line,
+                 hjust = 0.5,
+                 label = "Non-recession\navg.",
+                 color = "black",
+                 size = 3.5,
+                 fontface = "bold")
+  }
+  
+  if (between(rec_avg_line, data_range[1], data_range[2])) {
+    plt <- plt + geom_hline(yintercept = rec_avg_line,
+                            color = "red",
+                            linewidth = 0.75,
+                            linetype = "dashed"
+    ) + annotate("text",
+                 x = x_ann,
+                 y = rec_avg_line,
+                 hjust = 0.5,
+                 label = "Recession\navg.",
+                 color = "red",
+                 size = 3.5,
+                 fontface = "bold")
+  }
+  
+  if (y_data_type == "percentage") {
+    plt <- plt + scale_y_continuous(labels = label_percent(scale = 100, 
+                                                           suffix = "%", 
+                                                           accuracy = 0.1))
+  } else if (y_data_type == "dollar") {
+    plt <- plt + scale_y_continuous(labels = label_currency(scale = 1, 
+                                                            prefix = "$", 
+                                                            scale_cut = cut_short_scale()))
+  } else if (y_data_type == "number") {
+    plt <- plt + scale_y_continuous(labels = label_number(scale = 1, 
+                                                          scale_cut = cut_short_scale()))
+  }
   
   return(plt)
   
@@ -283,7 +345,7 @@ make_bar <- function(viz_df, x_col, y_col, viz_title = NULL,
   # Quoting X and Y variables:
   x_col_quo <- enquo(x_col)
   y_col_quo <- enquo(y_col)
-
+  
   viz_title <- make_chart_title(viz_df, viz_title)
   
   latest_date <- format(unique(viz_df$date), "%b. '%y")
@@ -292,8 +354,8 @@ make_bar <- function(viz_df, x_col, y_col, viz_title = NULL,
   viz_caption_full <- str_replace(viz_caption, "MMM. 'YY", latest_date)
   
   plt <- ggplot(viz_df, aes(x = !!x_col_quo, 
-                          y = reorder(!!y_col_quo, !!x_col_quo),
-                          fill = !!x_col_quo)) + 
+                            y = reorder(!!y_col_quo, !!x_col_quo),
+                            fill = !!x_col_quo)) + 
     geom_col(width = 0.85) +
     scale_x_continuous(expand = expansion(mult = c(0, .15))) +
     scale_y_discrete(labels = label_wrap(23)) +
@@ -310,8 +372,8 @@ make_bar <- function(viz_df, x_col, y_col, viz_title = NULL,
   return(plt)
 }
 
-make_yoy_bar <- function(viz_df, x_col, y_col, viz_title = NULL, 
-                         viz_subtitle, viz_caption) {
+make_pct_chg_bar <- function(viz_df, x_col, y_col, viz_title = NULL, 
+                             viz_subtitle, viz_caption) {
   # https://www.tidyverse.org/blog/2018/07/ggplot2-tidy-evaluation/
   # Quoting X and Y variables:
   x_col_quo <- enquo(x_col)
@@ -382,9 +444,9 @@ make_cur_map <- function(viz_df, shp_df, fill_col, geo_col,
   
 }
 
-make_yoy_map <- function(viz_df, shp_df, fill_col, geo_col,
-                         viz_title = NULL, viz_subtitle, 
-                         viz_caption) {
+make_pct_chg_map <- function(viz_df, shp_df, fill_col, geo_col,
+                             viz_title = NULL, viz_subtitle, 
+                             viz_caption) {
   # Joining data tibble with sf tibble that has `geometry` column that can be mapped
   full_df <- inner_join(viz_df, shp_df)
   
@@ -438,7 +500,7 @@ make_state_scatter <- function(viz_df, x_col, y_col, color_col,
   viz_caption_full <- str_replace(viz_caption, "MMM. 'YY", latest_date)
   
   plt <- ggplot(viz_df, aes(x = !!x_col_quo, 
-                                 y = !!y_col_quo)) +
+                            y = !!y_col_quo)) +
     scale_x_continuous(expand = expansion(mult = c(.05, .05))) +
     scale_y_continuous(expand = expansion(mult = c(.1, .1))) +
     scale_color_discrete() + 
@@ -532,4 +594,3 @@ save_chart <- function(plt) {
     units = "px"
   )
 }
-

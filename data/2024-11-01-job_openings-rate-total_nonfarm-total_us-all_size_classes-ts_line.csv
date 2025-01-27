@@ -1,16 +1,4 @@
 date,value,value_trail_three,dataelement_text,ratelevel_text,industry_text,state_text,sizeclass_text,val_type_text
-2019-11-01,4.3,4.466666666666666,Job Openings,Rate,Total nonfarm,Total US,All size classes,ts_line
-2019-12-01,4.2,4.366666666666666,Job Openings,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-01-01,4.5,4.333333333333333,Job Openings,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-02-01,4.4,4.366666666666666,Job Openings,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-03-01,3.8,4.233333333333333,Job Openings,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-04-01,3.4,3.8666666666666667,Job Openings,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-05-01,4,3.733333333333333,Job Openings,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-06-01,4.3,3.9,Job Openings,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-07-01,4.5,4.266666666666667,Job Openings,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-08-01,4.3,4.366666666666666,Job Openings,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-09-01,4.4,4.3999999999999995,Job Openings,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-10-01,4.6,4.433333333333333,Job Openings,Rate,Total nonfarm,Total US,All size classes,ts_line
 2020-11-01,4.6,4.533333333333332,Job Openings,Rate,Total nonfarm,Total US,All size classes,ts_line
 2020-12-01,4.5,4.566666666666666,Job Openings,Rate,Total nonfarm,Total US,All size classes,ts_line
 2021-01-01,4.8,4.633333333333333,Job Openings,Rate,Total nonfarm,Total US,All size classes,ts_line

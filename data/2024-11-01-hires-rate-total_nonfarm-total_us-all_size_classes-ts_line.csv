@@ -1,16 +1,4 @@
 date,value,value_trail_three,dataelement_text,ratelevel_text,industry_text,state_text,sizeclass_text,val_type_text
-2019-11-01,3.9,3.866666666666666,Hires,Rate,Total nonfarm,Total US,All size classes,ts_line
-2019-12-01,3.9,3.866666666666666,Hires,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-01-01,3.9,3.9,Hires,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-02-01,3.9,3.9,Hires,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-03-01,3.4,3.733333333333333,Hires,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-04-01,3.1,3.4666666666666663,Hires,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-05-01,6.1,4.199999999999999,Hires,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-06-01,5.4,4.866666666666666,Hires,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-07-01,4.5,5.333333333333333,Hires,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-08-01,4.3,4.733333333333333,Hires,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-09-01,4.2,4.333333333333333,Hires,Rate,Total nonfarm,Total US,All size classes,ts_line
-2020-10-01,4.3,4.266666666666667,Hires,Rate,Total nonfarm,Total US,All size classes,ts_line
 2020-11-01,4.1,4.199999999999999,Hires,Rate,Total nonfarm,Total US,All size classes,ts_line
 2020-12-01,3.9,4.1,Hires,Rate,Total nonfarm,Total US,All size classes,ts_line
 2021-01-01,3.9,3.9666666666666663,Hires,Rate,Total nonfarm,Total US,All size classes,ts_line

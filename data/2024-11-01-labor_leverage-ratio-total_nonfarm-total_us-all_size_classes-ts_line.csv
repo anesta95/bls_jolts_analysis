@@ -1,16 +1,4 @@
 date,value,value_trail_three,dataelement_text,ratelevel_text,industry_text,state_text,sizeclass_text,val_type_text
-2019-11-01,1.99,1.8800000000000001,Labor Leverage,Ratio,Total nonfarm,Total US,All size classes,ts_line
-2019-12-01,1.81,1.9000000000000001,Labor Leverage,Ratio,Total nonfarm,Total US,All size classes,ts_line
-2020-01-01,1.99,1.93,Labor Leverage,Ratio,Total nonfarm,Total US,All size classes,ts_line
-2020-02-01,1.77,1.8566666666666667,Labor Leverage,Ratio,Total nonfarm,Total US,All size classes,ts_line
-2020-03-01,0.22,1.3266666666666669,Labor Leverage,Ratio,Total nonfarm,Total US,All size classes,ts_line
-2020-04-01,0.22,0.7366666666666667,Labor Leverage,Ratio,Total nonfarm,Total US,All size classes,ts_line
-2020-05-01,1.04,0.4933333333333334,Labor Leverage,Ratio,Total nonfarm,Total US,All size classes,ts_line
-2020-06-01,1.16,0.8066666666666666,Labor Leverage,Ratio,Total nonfarm,Total US,All size classes,ts_line
-2020-07-01,1.65,1.2833333333333334,Labor Leverage,Ratio,Total nonfarm,Total US,All size classes,ts_line
-2020-08-01,1.86,1.5566666666666666,Labor Leverage,Ratio,Total nonfarm,Total US,All size classes,ts_line
-2020-09-01,2.01,1.8399999999999999,Labor Leverage,Ratio,Total nonfarm,Total US,All size classes,ts_line
-2020-10-01,1.95,1.9400000000000002,Labor Leverage,Ratio,Total nonfarm,Total US,All size classes,ts_line
 2020-11-01,1.53,1.83,Labor Leverage,Ratio,Total nonfarm,Total US,All size classes,ts_line
 2020-12-01,1.76,1.7466666666666668,Labor Leverage,Ratio,Total nonfarm,Total US,All size classes,ts_line
 2021-01-01,2.01,1.7666666666666666,Labor Leverage,Ratio,Total nonfarm,Total US,All size classes,ts_line
