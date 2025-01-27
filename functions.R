@@ -234,8 +234,8 @@ scatter_theme <- function() {
 # Function to make the dual current and trailing three-month average
 # line time-series plots.
 make_ts_line_chart <- function(viz_df, x_col, y_col_one, second_y_col = F,
-                               y_col_two = NULL, rec_avg_line, 
-                               non_rec_avg_line, y_data_type,
+                               y_col_two = NULL, rec_avg_line = NULL, 
+                               non_rec_avg_line = NULL, y_data_type,
                                viz_title = NULL, viz_subtitle, viz_caption) {
   # https://www.tidyverse.org/blog/2018/07/ggplot2-tidy-evaluation/
   # Quoting X and Y variables:
@@ -291,34 +291,38 @@ make_ts_line_chart <- function(viz_df, x_col, y_col_one, second_y_col = F,
     
   }
   
-  if (between(non_rec_avg_line, data_range[1], data_range[2])) {
-    plt <- plt + geom_hline(yintercept = non_rec_avg_line,
-                            color = "black",
-                            linewidth = 0.75,
-                            linetype = "dashed"
-    ) + annotate("text",
-                 x = x_ann,
-                 y = non_rec_avg_line,
-                 hjust = 0.5,
-                 label = "Non-recession\navg.",
-                 color = "black",
-                 size = 3.5,
-                 fontface = "bold")
+  if (!is.null(non_rec_avg_line)) {
+    if (between(non_rec_avg_line, data_range[1], data_range[2])) {
+      plt <- plt + geom_hline(yintercept = non_rec_avg_line,
+                              color = "black",
+                              linewidth = 0.75,
+                              linetype = "dashed"
+      ) + annotate("text",
+                   x = x_ann,
+                   y = non_rec_avg_line,
+                   hjust = 0.5,
+                   label = "Non-recession\navg.",
+                   color = "black",
+                   size = 3.5,
+                   fontface = "bold")
+    }
   }
   
-  if (between(rec_avg_line, data_range[1], data_range[2])) {
-    plt <- plt + geom_hline(yintercept = rec_avg_line,
-                            color = "red",
-                            linewidth = 0.75,
-                            linetype = "dashed"
-    ) + annotate("text",
-                 x = x_ann,
-                 y = rec_avg_line,
-                 hjust = 0.5,
-                 label = "Recession\navg.",
-                 color = "red",
-                 size = 3.5,
-                 fontface = "bold")
+  if (!is.null(rec_avg_line)) {
+    if (between(rec_avg_line, data_range[1], data_range[2])) {
+      plt <- plt + geom_hline(yintercept = rec_avg_line,
+                              color = "red",
+                              linewidth = 0.75,
+                              linetype = "dashed"
+      ) + annotate("text",
+                   x = x_ann,
+                   y = rec_avg_line,
+                   hjust = 0.5,
+                   label = "Recession\navg.",
+                   color = "red",
+                   size = 3.5,
+                   fontface = "bold")
+    }
   }
   
   if (y_data_type == "percentage") {
