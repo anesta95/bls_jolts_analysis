@@ -311,7 +311,7 @@ walk(hi_jo_ld_ll_qu_naics_ss_cur_df_list, ~econ_csv_write_out(.x, "./data"))
 # Making a list of ggplot current bar graphs from the list of data frames
 hi_jo_ld_ll_qu_naics_ss_cur_viz_list <- map(
   hi_jo_ld_ll_qu_naics_ss_cur_df_list, 
-  ~make_bar(
+  ~make_bar_chart(
     viz_df = .x,
     x_col = value,
     y_col = industry_text,
@@ -344,7 +344,7 @@ walk(hi_jo_ld_ll_qu_naics_ss_yoy_df_list, ~econ_csv_write_out(.x, "./data"))
 # Making a list of ggplot YoY bar charts from the list of data frames
 hi_jo_ld_ll_qu_naics_ss_yoy_viz_list <- map(
   hi_jo_ld_ll_qu_naics_ss_yoy_df_list, 
-  ~make_pct_chg_bar(
+  ~make_pct_chg_bar_chart(
     viz_df = .x,
     x_col = value,
     y_col = industry_text,
