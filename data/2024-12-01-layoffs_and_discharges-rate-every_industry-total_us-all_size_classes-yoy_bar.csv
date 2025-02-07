@@ -1,0 +1,13 @@
+date,value,dataelement_text,ratelevel_text,industry_text,state_text,sizeclass_text,val_type_text
+2024-12-01,0.5416666666666665,Layoffs And Discharges,Rate,Information,Total US,All size classes,yoy_bar
+2024-12-01,0.5161290322580645,Layoffs And Discharges,Rate,Mining and logging,Total US,All size classes,yoy_bar
+2024-12-01,0.2340425531914896,Layoffs And Discharges,Rate,Professional and business services,Total US,All size classes,yoy_bar
+2024-12-01,0.21875,Layoffs And Discharges,Rate,"Trade, transportation, and utilities",Total US,All size classes,yoy_bar
+2024-12-01,0.10526315789473695,Layoffs And Discharges,Rate,Private education and health services,Total US,All size classes,yoy_bar
+2024-12-01,0.0714285714285714,Layoffs And Discharges,Rate,Leisure and hospitality,Total US,All size classes,yoy_bar
+2024-12-01,0.06451612903225801,Layoffs And Discharges,Rate,Total nonfarm,Total US,All size classes,yoy_bar
+2024-12-01,0.03846153846153855,Layoffs And Discharges,Rate,Manufacturing,Total US,All size classes,yoy_bar
+2024-12-01,-0.050000000000000044,Layoffs And Discharges,Rate,Financial activities,Total US,All size classes,yoy_bar
+2024-12-01,-0.08333333333333348,Layoffs And Discharges,Rate,Government,Total US,All size classes,yoy_bar
+2024-12-01,-0.1428571428571429,Layoffs And Discharges,Rate,Construction,Total US,All size classes,yoy_bar
+2024-12-01,-0.15625,Layoffs And Discharges,Rate,Other services,Total US,All size classes,yoy_bar

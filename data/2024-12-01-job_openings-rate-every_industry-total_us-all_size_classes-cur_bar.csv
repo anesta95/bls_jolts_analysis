@@ -1,0 +1,13 @@
+date,value,dataelement_text,ratelevel_text,industry_text,state_text,sizeclass_text,val_type_text
+2024-12-01,6.733333333333333,Job Openings,Rate,Professional and business services,Total US,All size classes,cur_bar
+2024-12-01,5.833333333333333,Job Openings,Rate,Leisure and hospitality,Total US,All size classes,cur_bar
+2024-12-01,5.766666666666667,Job Openings,Rate,Private education and health services,Total US,All size classes,cur_bar
+2024-12-01,4.966666666666667,Job Openings,Rate,Financial activities,Total US,All size classes,cur_bar
+2024-12-01,4.7,Job Openings,Rate,Total nonfarm,Total US,All size classes,cur_bar
+2024-12-01,4.566666666666666,Job Openings,Rate,Information,Total US,All size classes,cur_bar
+2024-12-01,4.5,Job Openings,Rate,Other services,Total US,All size classes,cur_bar
+2024-12-01,3.6333333333333333,Job Openings,Rate,Government,Total US,All size classes,cur_bar
+2024-12-01,3.5,Job Openings,Rate,Mining and logging,Total US,All size classes,cur_bar
+2024-12-01,3.3666666666666667,Job Openings,Rate,"Trade, transportation, and utilities",Total US,All size classes,cur_bar
+2024-12-01,3.3333333333333335,Job Openings,Rate,Manufacturing,Total US,All size classes,cur_bar
+2024-12-01,2.9,Job Openings,Rate,Construction,Total US,All size classes,cur_bar
