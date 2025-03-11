@@ -1,0 +1,52 @@
+date,value,dataelement_text,ratelevel_text,industry_text,state_text,sizeclass_text,val_type_text
+2024-12-01,0.21604938271604945,Job Openings,Rate,Total nonfarm,Kentucky,All size classes,yoy_map
+2024-12-01,0.0370370370370372,Job Openings,Rate,Total nonfarm,Missouri,All size classes,yoy_map
+2024-12-01,0.022727272727272707,Job Openings,Rate,Total nonfarm,Virginia,All size classes,yoy_map
+2024-12-01,0.018292682926829285,Job Openings,Rate,Total nonfarm,Alabama,All size classes,yoy_map
+2024-12-01,0.018292682926829285,Job Openings,Rate,Total nonfarm,North Carolina,All size classes,yoy_map
+2024-12-01,0.012903225806451646,Job Openings,Rate,Total nonfarm,Arizona,All size classes,yoy_map
+2024-12-01,0.005813953488372103,Job Openings,Rate,Total nonfarm,Arkansas,All size classes,yoy_map
+2024-12-01,0,Job Openings,Rate,Total nonfarm,Indiana,All size classes,yoy_map
+2024-12-01,-0.017241379310344862,Job Openings,Rate,Total nonfarm,Georgia,All size classes,yoy_map
+2024-12-01,-0.017964071856287567,Job Openings,Rate,Total nonfarm,Delaware,All size classes,yoy_map
+2024-12-01,-0.02877697841726612,Job Openings,Rate,Total nonfarm,District of Columbia,All size classes,yoy_map
+2024-12-01,-0.02919708029197088,Job Openings,Rate,Total nonfarm,New York,All size classes,yoy_map
+2024-12-01,-0.05681818181818177,Job Openings,Rate,Total nonfarm,Louisiana,All size classes,yoy_map
+2024-12-01,-0.06043956043956056,Job Openings,Rate,Total nonfarm,Oklahoma,All size classes,yoy_map
+2024-12-01,-0.06557377049180335,Job Openings,Rate,Total nonfarm,New Mexico,All size classes,yoy_map
+2024-12-01,-0.06578947368421051,Job Openings,Rate,Total nonfarm,Oregon,All size classes,yoy_map
+2024-12-01,-0.06870229007633588,Job Openings,Rate,Total nonfarm,Washington,All size classes,yoy_map
+2024-12-01,-0.069620253164557,Job Openings,Rate,Total nonfarm,Kansas,All size classes,yoy_map
+2024-12-01,-0.08510638297872353,Job Openings,Rate,Total nonfarm,New Jersey,All size classes,yoy_map
+2024-12-01,-0.09090909090909083,Job Openings,Rate,Total nonfarm,West Virginia,All size classes,yoy_map
+2024-12-01,-0.1022727272727274,Job Openings,Rate,Total nonfarm,North Dakota,All size classes,yoy_map
+2024-12-01,-0.10303030303030303,Job Openings,Rate,Total nonfarm,Ohio,All size classes,yoy_map
+2024-12-01,-0.10552763819095479,Job Openings,Rate,Total nonfarm,South Carolina,All size classes,yoy_map
+2024-12-01,-0.10563380281690138,Job Openings,Rate,Total nonfarm,Connecticut,All size classes,yoy_map
+2024-12-01,-0.10691823899371067,Job Openings,Rate,Total nonfarm,Nebraska,All size classes,yoy_map
+2024-12-01,-0.11111111111111105,Job Openings,Rate,Total nonfarm,Utah,All size classes,yoy_map
+2024-12-01,-0.11111111111111116,Job Openings,Rate,Total nonfarm,Maryland,All size classes,yoy_map
+2024-12-01,-0.11392405063291133,Job Openings,Rate,Total nonfarm,Florida,All size classes,yoy_map
+2024-12-01,-0.11538461538461531,Job Openings,Rate,Total nonfarm,Vermont,All size classes,yoy_map
+2024-12-01,-0.11827956989247312,Job Openings,Rate,Total nonfarm,Mississippi,All size classes,yoy_map
+2024-12-01,-0.11851851851851847,Job Openings,Rate,Total nonfarm,Hawaii,All size classes,yoy_map
+2024-12-01,-0.1186440677966103,Job Openings,Rate,Total nonfarm,Wyoming,All size classes,yoy_map
+2024-12-01,-0.12698412698412698,Job Openings,Rate,Total nonfarm,Montana,All size classes,yoy_map
+2024-12-01,-0.12727272727272732,Job Openings,Rate,Total nonfarm,Alaska,All size classes,yoy_map
+2024-12-01,-0.1283783783783785,Job Openings,Rate,Total nonfarm,Iowa,All size classes,yoy_map
+2024-12-01,-0.1286549707602339,Job Openings,Rate,Total nonfarm,South Dakota,All size classes,yoy_map
+2024-12-01,-0.12883435582822078,Job Openings,Rate,Total nonfarm,Tennessee,All size classes,yoy_map
+2024-12-01,-0.13297872340425532,Job Openings,Rate,Total nonfarm,Minnesota,All size classes,yoy_map
+2024-12-01,-0.14197530864197527,Job Openings,Rate,Total nonfarm,New Hampshire,All size classes,yoy_map
+2024-12-01,-0.1428571428571428,Job Openings,Rate,Total nonfarm,Rhode Island,All size classes,yoy_map
+2024-12-01,-0.14465408805031443,Job Openings,Rate,Total nonfarm,Nevada,All size classes,yoy_map
+2024-12-01,-0.15748031496062997,Job Openings,Rate,Total nonfarm,California,All size classes,yoy_map
+2024-12-01,-0.17142857142857149,Job Openings,Rate,Total nonfarm,Idaho,All size classes,yoy_map
+2024-12-01,-0.17816091954022983,Job Openings,Rate,Total nonfarm,Massachusetts,All size classes,yoy_map
+2024-12-01,-0.18674698795180733,Job Openings,Rate,Total nonfarm,Michigan,All size classes,yoy_map
+2024-12-01,-0.1953488372093024,Job Openings,Rate,Total nonfarm,Colorado,All size classes,yoy_map
+2024-12-01,-0.2272727272727273,Job Openings,Rate,Total nonfarm,Maine,All size classes,yoy_map
+2024-12-01,-0.2303370786516855,Job Openings,Rate,Total nonfarm,Wisconsin,All size classes,yoy_map
+2024-12-01,-0.23076923076923073,Job Openings,Rate,Total nonfarm,Illinois,All size classes,yoy_map
+2024-12-01,-0.2574850299401197,Job Openings,Rate,Total nonfarm,Texas,All size classes,yoy_map
+2024-12-01,-0.2588235294117647,Job Openings,Rate,Total nonfarm,Pennsylvania,All size classes,yoy_map

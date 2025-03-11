@@ -1,0 +1,52 @@
+date,value,dataelement_text,ratelevel_text,industry_text,state_text,sizeclass_text,val_type_text
+2024-12-01,0.09174311926605516,Hires,Rate,Total nonfarm,New Mexico,All size classes,yoy_map
+2024-12-01,0.08849557522123908,Hires,Rate,Total nonfarm,Indiana,All size classes,yoy_map
+2024-12-01,0.07843137254901977,Hires,Rate,Total nonfarm,Alaska,All size classes,yoy_map
+2024-12-01,0.06060606060606055,Hires,Rate,Total nonfarm,Wyoming,All size classes,yoy_map
+2024-12-01,0.05681818181818166,Hires,Rate,Total nonfarm,Washington,All size classes,yoy_map
+2024-12-01,0.04629629629629628,Hires,Rate,Total nonfarm,North Carolina,All size classes,yoy_map
+2024-12-01,0.04395604395604402,Hires,Rate,Total nonfarm,Pennsylvania,All size classes,yoy_map
+2024-12-01,0.0431034482758621,Hires,Rate,Total nonfarm,Utah,All size classes,yoy_map
+2024-12-01,0.03809523809523818,Hires,Rate,Total nonfarm,Oregon,All size classes,yoy_map
+2024-12-01,0.03191489361702127,Hires,Rate,Total nonfarm,Hawaii,All size classes,yoy_map
+2024-12-01,0.022388059701492713,Hires,Rate,Total nonfarm,Idaho,All size classes,yoy_map
+2024-12-01,0.01980198019801982,Hires,Rate,Total nonfarm,Kansas,All size classes,yoy_map
+2024-12-01,0.019230769230769384,Hires,Rate,Total nonfarm,Michigan,All size classes,yoy_map
+2024-12-01,0.011764705882353121,Hires,Rate,Total nonfarm,Massachusetts,All size classes,yoy_map
+2024-12-01,0.010204081632652962,Hires,Rate,Total nonfarm,Ohio,All size classes,yoy_map
+2024-12-01,0.010101010101010166,Hires,Rate,Total nonfarm,Wisconsin,All size classes,yoy_map
+2024-12-01,2.220446049250313e-16,Hires,Rate,Total nonfarm,Nevada,All size classes,yoy_map
+2024-12-01,0,Hires,Rate,Total nonfarm,Missouri,All size classes,yoy_map
+2024-12-01,0,Hires,Rate,Total nonfarm,New York,All size classes,yoy_map
+2024-12-01,0,Hires,Rate,Total nonfarm,Vermont,All size classes,yoy_map
+2024-12-01,-0.006849315068493178,Hires,Rate,Total nonfarm,Montana,All size classes,yoy_map
+2024-12-01,-0.008264462809917106,Hires,Rate,Total nonfarm,North Dakota,All size classes,yoy_map
+2024-12-01,-0.00826446280991755,Hires,Rate,Total nonfarm,Maine,All size classes,yoy_map
+2024-12-01,-0.010000000000000009,Hires,Rate,Total nonfarm,Iowa,All size classes,yoy_map
+2024-12-01,-0.016666666666666607,Hires,Rate,Total nonfarm,South Dakota,All size classes,yoy_map
+2024-12-01,-0.024590163934426257,Hires,Rate,Total nonfarm,Rhode Island,All size classes,yoy_map
+2024-12-01,-0.027272727272727337,Hires,Rate,Total nonfarm,New Hampshire,All size classes,yoy_map
+2024-12-01,-0.028037383177570097,Hires,Rate,Total nonfarm,Nebraska,All size classes,yoy_map
+2024-12-01,-0.034482758620689724,Hires,Rate,Total nonfarm,California,All size classes,yoy_map
+2024-12-01,-0.03731343283582078,Hires,Rate,Total nonfarm,Louisiana,All size classes,yoy_map
+2024-12-01,-0.038461538461538325,Hires,Rate,Total nonfarm,South Carolina,All size classes,yoy_map
+2024-12-01,-0.06000000000000005,Hires,Rate,Total nonfarm,Connecticut,All size classes,yoy_map
+2024-12-01,-0.06766917293233077,Hires,Rate,Total nonfarm,West Virginia,All size classes,yoy_map
+2024-12-01,-0.07692307692307687,Hires,Rate,Total nonfarm,Colorado,All size classes,yoy_map
+2024-12-01,-0.07758620689655182,Hires,Rate,Total nonfarm,Tennessee,All size classes,yoy_map
+2024-12-01,-0.08000000000000007,Hires,Rate,Total nonfarm,Georgia,All size classes,yoy_map
+2024-12-01,-0.08000000000000007,Hires,Rate,Total nonfarm,Mississippi,All size classes,yoy_map
+2024-12-01,-0.08571428571428574,Hires,Rate,Total nonfarm,New Jersey,All size classes,yoy_map
+2024-12-01,-0.0944881889763779,Hires,Rate,Total nonfarm,Delaware,All size classes,yoy_map
+2024-12-01,-0.10256410256410253,Hires,Rate,Total nonfarm,Arizona,All size classes,yoy_map
+2024-12-01,-0.10810810810810823,Hires,Rate,Total nonfarm,Illinois,All size classes,yoy_map
+2024-12-01,-0.12068965517241359,Hires,Rate,Total nonfarm,Virginia,All size classes,yoy_map
+2024-12-01,-0.12195121951219523,Hires,Rate,Total nonfarm,Alabama,All size classes,yoy_map
+2024-12-01,-0.1280000000000001,Hires,Rate,Total nonfarm,Kentucky,All size classes,yoy_map
+2024-12-01,-0.14814814814814814,Hires,Rate,Total nonfarm,Arkansas,All size classes,yoy_map
+2024-12-01,-0.15068493150684914,Hires,Rate,Total nonfarm,Oklahoma,All size classes,yoy_map
+2024-12-01,-0.15573770491803285,Hires,Rate,Total nonfarm,Minnesota,All size classes,yoy_map
+2024-12-01,-0.16129032258064513,Hires,Rate,Total nonfarm,District of Columbia,All size classes,yoy_map
+2024-12-01,-0.19200000000000006,Hires,Rate,Total nonfarm,Texas,All size classes,yoy_map
+2024-12-01,-0.2093023255813954,Hires,Rate,Total nonfarm,Florida,All size classes,yoy_map
+2024-12-01,-0.22137404580152664,Hires,Rate,Total nonfarm,Maryland,All size classes,yoy_map
