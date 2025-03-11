@@ -1,0 +1,13 @@
+date,value,dataelement_text,ratelevel_text,industry_text,state_text,sizeclass_text,val_type_text
+2025-01-01,1.7333333333333334,Layoffs And Discharges,Rate,Construction,Total US,All size classes,cur_bar
+2025-01-01,1.7,Layoffs And Discharges,Rate,Professional and business services,Total US,All size classes,cur_bar
+2025-01-01,1.5999999999999999,Layoffs And Discharges,Rate,Leisure and hospitality,Total US,All size classes,cur_bar
+2025-01-01,1.2333333333333334,Layoffs And Discharges,Rate,"Trade, transportation, and utilities",Total US,All size classes,cur_bar
+2025-01-01,1.2333333333333332,Layoffs And Discharges,Rate,Mining and logging,Total US,All size classes,cur_bar
+2025-01-01,1.0666666666666667,Layoffs And Discharges,Rate,Information,Total US,All size classes,cur_bar
+2025-01-01,1.0666666666666667,Layoffs And Discharges,Rate,Total nonfarm,Total US,All size classes,cur_bar
+2025-01-01,1,Layoffs And Discharges,Rate,Other services,Total US,All size classes,cur_bar
+2025-01-01,0.9333333333333332,Layoffs And Discharges,Rate,Manufacturing,Total US,All size classes,cur_bar
+2025-01-01,0.6666666666666666,Layoffs And Discharges,Rate,Private education and health services,Total US,All size classes,cur_bar
+2025-01-01,0.5333333333333333,Layoffs And Discharges,Rate,Financial activities,Total US,All size classes,cur_bar
+2025-01-01,0.3333333333333333,Layoffs And Discharges,Rate,Government,Total US,All size classes,cur_bar

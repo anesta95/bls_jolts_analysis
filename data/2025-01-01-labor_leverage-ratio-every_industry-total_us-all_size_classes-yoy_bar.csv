@@ -1,0 +1,13 @@
+date,value,dataelement_text,ratelevel_text,industry_text,state_text,sizeclass_text,val_type_text
+2025-01-01,0.14548238897396648,Labor Leverage,Ratio,Financial activities,Total US,All size classes,yoy_bar
+2025-01-01,0.13793103448275867,Labor Leverage,Ratio,Construction,Total US,All size classes,yoy_bar
+2025-01-01,0.04207920792079212,Labor Leverage,Ratio,Professional and business services,Total US,All size classes,yoy_bar
+2025-01-01,0.026731470230862753,Labor Leverage,Ratio,Other services,Total US,All size classes,yoy_bar
+2025-01-01,-0.04258675078864371,Labor Leverage,Ratio,Mining and logging,Total US,All size classes,yoy_bar
+2025-01-01,-0.04958677685950419,Labor Leverage,Ratio,Government,Total US,All size classes,yoy_bar
+2025-01-01,-0.1196850393700788,Labor Leverage,Ratio,Total nonfarm,Total US,All size classes,yoy_bar
+2025-01-01,-0.1664984863773964,Labor Leverage,Ratio,Private education and health services,Total US,All size classes,yoy_bar
+2025-01-01,-0.23109243697478998,Labor Leverage,Ratio,"Trade, transportation, and utilities",Total US,All size classes,yoy_bar
+2025-01-01,-0.25040916530278245,Labor Leverage,Ratio,Manufacturing,Total US,All size classes,yoy_bar
+2025-01-01,-0.3109327983951856,Labor Leverage,Ratio,Leisure and hospitality,Total US,All size classes,yoy_bar
+2025-01-01,-0.3403508771929824,Labor Leverage,Ratio,Information,Total US,All size classes,yoy_bar
