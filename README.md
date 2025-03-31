@@ -32,12 +32,18 @@ Each data measure visualized in this project in this project is the [measure rat
 
 ### Naming conventions
 All graphics are PNG files in the `charts` directory. Every data visualization 
-has a corresponding CSV file that was used to create it in the `data` folder.
+has a corresponding CSV file that was used to create it in the `data` directory.
 Both CSVs and PNGs are named with the following format where each aspect of the 
 data is delimited with a dash `-` and spaces are replaced with underscores `_`:
 
 CSV file example: `2024-11-01-hires-rate-total_nonfarm-total_us-all_size_classes-ts_line.csv`
 PNG file example: `2024-11-01-hires-rate-total_nonfarm-total_us-all_size_classes-ts_line.png`
+
+### Data conventions
+Every `econ analysis` data CSV file at minimum will have the following columns:
+* `date`: The date associated with the data in the data row. The date will be in `YYYY-MM-DD` format regardless of the time period the date captures. All dates will be the first day of the time period. For example, data for April 2025 will be displayed as `2025-04-01`. Data for Q2 2025 will be `2025-04-01`. Data for the year 2025 will be `2025-01-01`. This will have a data type `double` with a class of `Date`.
+* `date_period`: The time period that each row of the data captures. The most common formats are monthly, quarterly, and annually. This have a data type and class of `character`.
+* `value`: 
 
 ### Included data
 
