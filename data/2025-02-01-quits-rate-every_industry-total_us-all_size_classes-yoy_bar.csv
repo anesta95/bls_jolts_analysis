@@ -1,0 +1,13 @@
+date,value,dataelement_text,ratelevel_text,industry_text,state_text,sizeclass_text,val_type_text
+2025-02-01,0.16438356164383583,Quits,Rate,Other services,Total US,All size classes,yoy_bar
+2025-02-01,0.04225352112676051,Quits,Rate,Professional and business services,Total US,All size classes,yoy_bar
+2025-02-01,0.03703703703703698,Quits,Rate,Construction,Total US,All size classes,yoy_bar
+2025-02-01,-0.050000000000000044,Quits,Rate,Financial activities,Total US,All size classes,yoy_bar
+2025-02-01,-0.06944444444444453,Quits,Rate,"Trade, transportation, and utilities",Total US,All size classes,yoy_bar
+2025-02-01,-0.07692307692307687,Quits,Rate,Government,Total US,All size classes,yoy_bar
+2025-02-01,-0.07812499999999989,Quits,Rate,Total nonfarm,Total US,All size classes,yoy_bar
+2025-02-01,-0.08196721311475419,Quits,Rate,Private education and health services,Total US,All size classes,yoy_bar
+2025-02-01,-0.12903225806451624,Quits,Rate,Mining and logging,Total US,All size classes,yoy_bar
+2025-02-01,-0.1777777777777777,Quits,Rate,Information,Total US,All size classes,yoy_bar
+2025-02-01,-0.18045112781954897,Quits,Rate,Leisure and hospitality,Total US,All size classes,yoy_bar
+2025-02-01,-0.1923076923076924,Quits,Rate,Manufacturing,Total US,All size classes,yoy_bar
