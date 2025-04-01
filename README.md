@@ -50,6 +50,7 @@ Every `econ analysis` data CSV file at minimum will have the following columns:
 * `region_text`: The geographic region the data in the `value` column is covering. This will have a data type and class of `character`. If the region is in the United States there is a good chance it will be within the [Census Bureau Geographic Entity Hierarchy](https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf).
 * `viz_type`: The type of visualization made by the data in the `value` column. The most common are `ts_line`, `bar`, `map`, and `scatter`. This will have a data type and class of `character`.
 
+This specific repository will have data with the following variables:
 ### Included data
 
 | Variable Name     | Variable Data Type | Variable Description                                                                                                                                                                                                                                                                                                                                                |
