@@ -8,6 +8,8 @@
 
 # Function that takes in data frame of columns with metadata on specific
 # details of data or chart and returns a vector of lower-case values for each
+#### TODO: Change this function to make sure it works with chart and CSV
+#### write-out functions `econ_csv_write_out()` and `save_chart()`
 make_metadata_vec <- function(df) {
   metadata_vec <- imap_chr(df, function(x, col_name){
     uniq_col_val <- unique(x)
@@ -28,8 +30,12 @@ make_metadata_vec <- function(df) {
   return(metadata_vec)
 }
 
+#### TODO: Write a function that checks if data frame has at least the minimum
+#### econanalyzr column names and are in the correct order. 
+
 # Function to get average value from a vector of numeric data types after 
 # filtering out data values.
+#### TODO: Make sure this function uses proper dplyr programming for package environment
 get_avg_col_val <- function(df, dts, val_col, filter_type) {
   
   val_col_name <- enquo(val_col)
@@ -52,6 +58,8 @@ get_avg_col_val <- function(df, dts, val_col, filter_type) {
 # Function that add a trailing three-month average column to a data frame
 # with a numeric column named `value`. It will also filter the data frame
 # to only rows that contain dates within the last 48 months
+#### TODO: Make this function more modular to take a variable time period and
+#### uses dplyr functional programming to work inside of packages.
 make_viz_df_trail_three <- function(df) {
   
   ts_jolts_beginning_month <- max(df$date, na.rm = T) %m-% months(48)
@@ -66,6 +74,8 @@ make_viz_df_trail_three <- function(df) {
 
 # Function to make visualization title from either unique combination of 
 # `dataelement_text` and `ratelevel_text` columns or use supplied title.
+#### TODO: Make this function  conform to new econanalyzr
+#### data syntax. Use dplyr functional programming to work inside of packages.
 make_chart_title <- function(viz_df, viz_title) {
   if (is.null(viz_title)) {
     viz_title <- paste(
@@ -92,8 +102,17 @@ get_data_range <- function(vec) {
   return(extra_range)
 }
 
+#### TODO: Write dynamic function that will annualize a numeric vector of 
+#### changes depending on time periods. Use the econanalyzr data syntax and
+#### dplyr functional programming to work inside of packages.
+
+#### TODO: Write dynamic function that will create an index of a numeric vector of 
+#### data depending on time periods. Use the econanalyzr data syntax and
+#### dplyr functional programming to work inside of packages.
+
 ## Data gathering functions ##
 # Function to retrieve data from FRED API
+#### TODO: Make sure this function will be able to work inside packages 
 get_fred_data <- function(series_id, api_key) {
   # API doc reference: https://fred.stlouisfed.org/docs/api/fred/series_observations.html
   fred_res <- GET(
@@ -122,6 +141,7 @@ get_fred_data <- function(series_id, api_key) {
 
 # Function to make HTTP GET requests with a provided email in the `user-agent`
 # request header to the BLS database and parses returned data as TSVs.
+#### TODO: Make sure this function will be able to work inside packages 
 get_bls_data <- function(url, email) {
   bls_res <- GET(url = url, user_agent(email))
   stop_for_status(bls_res)
@@ -140,6 +160,7 @@ get_bls_data <- function(url, email) {
 
 # Function to get additional codes CSVs and return data frames without the 
 # `display_level`, `selectable`, and `sort_sequence` columns
+#### TODO: Make sure this function will be able to work inside packages 
 get_bls_ref_code_table <- function(survey_abb, table_type, email) {
   ref_code_url <- paste0("https://download.bls.gov/pub/time.series/",
                          survey_abb,
@@ -754,6 +775,9 @@ make_state_scatter <- function(viz_df, x_col, y_col, color_col,
 # Function that writes out data frame as a CSV into specified folder. 
 # Assumes the `df` dataframe has a `dataelement_text` column with the name of 
 # the measure and a `date` column that has an associated date with the data.
+
+#### TODO: Make sure this function conforms with the econanalyzr syntax
+#### and uses dplyr programming to work inside of package.
 econ_csv_write_out <- function(df, folder) {
   
   data_date <- as.character(max(df$date, na.rm = T))
@@ -773,6 +797,8 @@ econ_csv_write_out <- function(df, folder) {
   on.exit(expr = message(paste("Writing out", filename)), add = T)
 }
 
+#### TODO: Make sure this function conforms with the econanalyzr syntax
+#### and uses dplyr programming to work inside of package.
 save_chart <- function(plt) {
   
   bsky_width <- 600
