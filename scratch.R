@@ -7,7 +7,8 @@ sample_df_viz <- sample_df %>%
          geo_entity_type_text = "nation",
          geo_entity_text = "US") %>% 
   pivot_longer(cols = starts_with("value"), names_to = "date_measure_text", values_to = "value") %>% 
-  mutate(date_measure_text = if_else(date_measure_text == "value", "cur", "cur_trail_3"))
+  mutate(date_measure_text = if_else(date_measure_text == "value", "cur", "cur_trail_3")) %>% 
+  filter(date_measure_text == "cur_trail_3")
 
 
 non_rec_avg <- hi_jo_ld_qu_uo_avg_list[[1]][1]
@@ -75,8 +76,8 @@ make_ts_line_chart_revamp <- function(viz_df, x_col, y_col, rec_avg_line = NULL,
     scale_size_identity() +
     scale_color_identity() +
     guides(
-      color = F,
-      linewidth = F
+      color = "none",
+      linewidth = "none"
     ) +
     labs(
       title = viz_title,
