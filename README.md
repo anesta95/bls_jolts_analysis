@@ -38,7 +38,8 @@ Every econ analysis data CSV file at minimum will have the following columns:
 * `data_element_text`: What the data in the `value` column is measuring. This will have a data type and class of `character`.
 * `metric_text`: The mathematical expression the data in the `value` column is expressed as. The most common are `level`, `rate`, `ratio`, `percentage`, `proportion`, and `index`. This will have a data type and class of `character`.
 * `date_measure_text`: The change in dates measured by the data in the `value` column. The most common are `cur` for current, `yoy` for year-over-year change, `mom` for month-over-month change, and `qoq` for quarter-over-quarter change. This will have a data type and class of `character`.
-* `region_type_text`: The geographic region the data in the `value` column is covering. This will have a data type and class of `character`. If the region is in the United States there is a good chance it will be within the [Census Bureau Geographic Entity Hierarchy](https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf).
+* `geo_entity_type_text`: The geographic entity _type_ the data in the `value` column is covering. This will have a data type and class of `character`. If the region is in the United States there is a good chance it will be within the [Census Bureau Geographic Entity Hierarchy](https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf).
+* `geo_entity_text`: The name(s) geographic entity/entities that are described by the data.
 * `viz_type_text`: The type of visualization made by the data in the `value` column. The most common are `ts_line`, `bar`, `map`, and `scatter`. This will have a data type and class of `character`.
 
 ### Naming conventions
@@ -54,8 +55,8 @@ Data and visualization files will be named in the following order:
 3. `metric_text`
 4. `date_period_text`
 5. `date_measure_text`
-6. `region_type_text`
-7. `region_text`
+6. `geo_entity_type_text`
+7. `geo_entity_text`
 8. _Any other aspects of the data specific to the release that are needed to uniquely identify it._ Examples include `industry_text`, `size_class_text`, `seas_adj_text`, among others.
 9. `viz_type_text`
 
@@ -77,8 +78,8 @@ This specific repository will have data with the following variables:
 | metric_text       | character           | The description of the what the numerical value the data in the `value` column is measuring. One of `rate`, `ratio`, or `level`.                                                                                                                                                                                                                           |
 | date_period_text  | character           | The time period that each row of the data captures. This will be `monthly`.                                                                                                                                                                                                                                                                                |
 | date_measure_text | character           | The change in dates measured by the data in the value column. These will include `cur` for current, `yoy` for year-over-year change and `mom` for month-over-month change.                                                                                                                                                                                 |
-| region_type_text  | character           | The region type that is present in the `region_text` column. This will be either `national` or `state`.                                                                                                                                                                                                                                                    |
-| region_text       | character           | The U.S. region the data is associated with as defined by the [U.S. Census Bureau](https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf).                                                                                                                                                                                               |
+| geo_entity_type_text  | character           | The geographic entity type that is present in the `geo_entity_text` column. This will be either `nation` or `state`.                                                                                                                                                                                                                                                    |
+| geo_entity_text       | character           | The name(s) geographic entity/entities that are described by the data. These are defined by the [U.S. Census Bureau](https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf).                                                                                                                                                                                               |
 | industry_text     | character           | The [NAICS supersector](https://www.bls.gov/sae/additional-resources/naics-supersectors-for-ces-program.htm) that the data is associated with. If every separate supersector is included, the chart filename will denote `every_industry`.                                                                                                                 |
 | size_class_text   | character           | The [firm size class](https://download.bls.gov/pub/time.series/jt/jt.sizeclass) that the data is associated with. If every separate firm size class is included, the chart filename will denote `every_size_class`.                                                                                                                                        |
 | seas_adj_text     | character           | Text that will denote if the data in the `value` column is seasonally-adjusted or not.                                                                                                                                                                                                                                                                     |

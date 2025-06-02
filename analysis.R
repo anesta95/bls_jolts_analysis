@@ -153,7 +153,7 @@ hi_jo_ld_qu_uo_non_recession_avg_list <- map(hi_jo_ld_qu_uo_df_list,
                                              ~get_avg_col_val(
                                                .x, recession_dates, value, "exclusive"))
 
-# Creating list of non-recession averages of all measures in the list of data frames
+# Creating list of recession averages of all measures in the list of data frames
 hi_jo_ld_qu_uo_recession_avg_list <- map(hi_jo_ld_qu_uo_df_list, 
                                              ~get_avg_col_val(
                                                .x, recession_dates, value, "inclusive"))
@@ -170,7 +170,6 @@ hi_jo_ld_qu_uo_ts_df_list <- map(hi_jo_ld_qu_uo_df_list,
 # Writing out each data frame that will be visualized in a time series chart
 # to a CSV
 walk(hi_jo_ld_qu_uo_ts_df_list, ~econ_csv_write_out(.x, "./data"))
-
 
 # Making a list of ggplot line charts from the list of time series data frames
 hi_jo_ld_qu_uo_ts_viz_list <- map2(
