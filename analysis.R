@@ -111,11 +111,19 @@ full_jt_df_list <- list_flatten(
 # Iteratively joining each code title reference file onto main data frame with
 # `dplyr::reduce()`
 jolts_full <- reduce(full_jt_df_list, left_join) %>% 
-  mutate(dataelement_text = str_to_title(dataelement_text)) %>% 
+  mutate(
+    date_period_text = "Monthly",
+    dataelement_text = str_to_title(dataelement_text),
+    geo_entity_type_text = case_when(state_code == "00" ~ "Nation",
+                                     state_code %in% c("MW", "NE", "SO", "WE") ~ "Region",
+                                     T ~ "State"),
+    state_text = if_else(state_text == "Total US", "US", state_text)
+    ) %>% 
+  arrange(series_id, desc(date)) %>% 
   rename(
     data_element_text = dataelement_text,
     metric_text = ratelevel_text,
-    region_text = state_text,
+    geo_entity_text = state_text,
     seas_adj_text = seasonal_text
   )
 
@@ -141,11 +149,13 @@ hi_jo_ld_qu_uo_df_list <- jolts_full %>%
          dataelement_code %in% c("HI", "JO", "LD", "QU", "UO"),
          ratelevel_code == "R"
   ) %>% 
-  select(date, value, data_element_text, metric_text, industry_text, region_text, sizeclass_text) %>%
   mutate(
     data_element_text = str_remove(data_element_text, "\\s+Ratio"),
-    val_type_text = "ts_line"
+    date_measure_text = "cur",
+    viz_type_text = "ts_line"
     ) %>%
+  select(date, date_period_text, value, data_element_text, metric_text, date_measure_text,
+         industry_text, sizeclass_text, geo_entity_type_text, geo_entity_text, viz_type_text) %>%
   group_split(data_element_text, .keep = T)
 
 # Creating list of non-recession averages of all measures in the list of data frames
@@ -165,7 +175,11 @@ hi_jo_ld_qu_uo_avg_list <- map2(
 # Editing data frame list to calculate a trailing three month average column and
 # filter dates to only past five years.
 hi_jo_ld_qu_uo_ts_df_list <- map(hi_jo_ld_qu_uo_df_list, 
-                                 ~make_viz_df_trail_three(.x))
+                                 function(x) {
+                                   df <- make_trail_avg_col(x, 3) %>% 
+                                     filter_recent_dates(48, "month")
+                                 }) 
+  
 
 # Writing out each data frame that will be visualized in a time series chart
 # to a CSV

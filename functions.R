@@ -15,8 +15,9 @@ make_metadata_vec <- function(df) {
     uniq_col_val <- unique(x)
     
     if (length(uniq_col_val) > 1) {
+      num_instances <- length(uniq_col_val)
       aspect_name <- str_remove(col_name, "_text")
-      detail_val <- paste0("every_", aspect_name)
+      detail_val <- paste0(num_instances, "_", aspect_name)
     } else {
       detail_val <- uniq_col_val
     }
@@ -55,21 +56,46 @@ get_avg_col_val <- function(df, dts, val_col, filter_type) {
   return(avg)
 }
 
-# Function that add a trailing three-month average column to a data frame
-# with a numeric column named `value`. It will also filter the data frame
-# to only rows that contain dates within the last 48 months
+# Function that add a moving (trailing) three-month average column to a data frame
+# with a numeric column named `value`. 
 #### TODO: Make this function more modular to take a variable time period and
 #### uses dplyr functional programming to work inside of packages.
-make_viz_df_trail_three <- function(df) {
+make_trail_avg_col <- function(df, trail_amount) {
   
-  ts_jolts_beginning_month <- max(df$date, na.rm = T) %m-% months(48)
+  trail_df <- df %>% 
+    mutate(
+      value = rollmean(value, {{ trail_amount }}, fill = NA, align = "left"),
+      date_measure_text = paste(date_measure_text, "trail", {{ trail_amount }}, sep = "_")
+    )
   
-  viz_df <- df %>% 
-    mutate(value_trail_three = rollmean(value, 3, fill = NA, align = "right")) %>% 
-    relocate(value_trail_three, .after = value) %>% 
-    filter(date >= ts_jolts_beginning_month)
+  combo_df <- bind_rows(df, trail_df)
   
-  return(viz_df)
+  # viz_df <- df %>% 
+  #   arrange(desc(date)) %>% 
+  #   mutate("value_trail_{{trail_amount}}" := rollmean(value, {{ trail_amount }}, fill = NA, align = "left")) %>% 
+  #   relocate(starts_with("value_trail_"), .after = value) 
+  
+  return(combo_df)
+}
+
+# Function that will return all rows from the most recent date in the data frame
+# until a specified time previous to the most recent date.
+filter_recent_dates <- function(df, time_amount, time_measure) {
+  latest_date <- max(df$date, na.rm = T)
+  
+  if (time_measure == "month") {
+    start_date <- latest_date %m-% months(time_amount)
+  } else if (time_measure == "year") {
+    start_date <- latest_date - years(time_amount)
+  } else if (time_measure == "day") {
+    start_date <- latest_date - days(time_amount)
+  }
+  
+  filtered_df <- df %>% 
+    arrange(desc(date)) %>% 
+    filter(date >= start_date)
+  
+  return(filtered_df)
 }
 
 # Function to make visualization title from either unique combination of 
