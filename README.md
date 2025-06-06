@@ -37,10 +37,10 @@ Every econ analysis data CSV file at minimum will have the following columns:
 * `value`: The value that is being measured in the data. This will have a data type of `double` and a class of `numeric`.
 * `data_element_text`: What the data in the `value` column is measuring. This will have a data type and class of `character`.
 * `metric_text`: The mathematical expression the data in the `value` column is expressed as. The most common are `level`, `rate`, `ratio`, `percentage`, `proportion`, and `index`. This will have a data type and class of `character`.
-* `date_measure_text`: The change in dates measured by the data in the `value` column. The most common are `cur` for current, `yoy` for year-over-year change, `mom` for month-over-month change, and `qoq` for quarter-over-quarter change. This will have a data type and class of `character`.
+* `date_measure_text`: The change in dates measured by the data in the `value` column. The most common are `current`, `year-over-year`, `month-over-month` and `quarter-over-quarter`. This will have a data type and class of `character`.
 * `geo_entity_type_text`: The geographic entity _type_ the data in the `value` column is covering. This will have a data type and class of `character`. If the region is in the United States there is a good chance it will be within the [Census Bureau Geographic Entity Hierarchy](https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf).
 * `geo_entity_text`: The name(s) geographic entity/entities that are described by the data.
-* `viz_type_text`: The type of visualization made by the data in the `value` column. The most common are `ts_line`, `bar`, `map`, and `scatter`. This will have a data type and class of `character`.
+* `viz_type_text`: The type of visualization made by the data in the `value` column. The most common are `time series line`, `bar`, `map`, and `scatter`. This will have a data type and class of `character`.
 
 ### Naming conventions
 All graphics are PNG files in the `charts` directory. Every data visualization 

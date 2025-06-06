@@ -34,7 +34,7 @@ make_ts_line_chart_revamp(
 )
 
 
-make_ts_line_chart_revamp <- function(viz_df, x_col, y_col, rec_avg_line = NULL, 
+make_ts_line_chart <- function(viz_df, x_col, y_col, rec_avg_line = NULL, 
                                non_rec_avg_line = NULL, y_data_type,
                                viz_title = NULL, viz_subtitle, viz_caption) {
   # TEMPORARY: Creating ad-hoc columns for line size and color
@@ -85,20 +85,6 @@ make_ts_line_chart_revamp <- function(viz_df, x_col, y_col, rec_avg_line = NULL,
       caption = viz_caption_full
     ) +
     ts_line_theme()
-  
-  # # Adding in second smaller line if specified
-  # if (second_y_col) {
-  #   y_col_two_quo <- enquo(y_col_two)
-  #   # Replacing the data range with the more volatile mom annualized column
-  #   second_line_data_range <- get_data_range(pull(viz_df, !!y_col_two_quo))
-  #   data_range <- range(data_range, second_line_data_range)
-  #   plt <- plt + geom_line(mapping = aes(y = !!y_col_two_quo),
-  #                          linewidth = 0.8,
-  #                          color = "#a6cee3", 
-  #                          lineend = "round",
-  #                          linejoin = "bevel")
-  #   
-  # }
   
   if (!is.null(non_rec_avg_line)) {
     if (between(non_rec_avg_line, data_range[1], data_range[2])) {

@@ -63,17 +63,13 @@ get_avg_col_val <- function(df, dts, val_col, filter_type) {
 make_trail_avg_col <- function(df, trail_amount) {
   
   trail_df <- df %>% 
+    arrange(desc(date)) %>% 
     mutate(
       value = rollmean(value, {{ trail_amount }}, fill = NA, align = "left"),
-      date_measure_text = paste(date_measure_text, "trail", {{ trail_amount }}, sep = "_")
+      date_measure_text = paste(date_measure_text, "trail", {{ trail_amount }})
     )
   
   combo_df <- bind_rows(df, trail_df)
-  
-  # viz_df <- df %>% 
-  #   arrange(desc(date)) %>% 
-  #   mutate("value_trail_{{trail_amount}}" := rollmean(value, {{ trail_amount }}, fill = NA, align = "left")) %>% 
-  #   relocate(starts_with("value_trail_"), .after = value) 
   
   return(combo_df)
 }
@@ -294,19 +290,23 @@ scatter_theme <- function() {
 
 # Function to make the dual current and trailing three-month average
 # line time-series plots.
-make_ts_line_chart <- function(viz_df, x_col, y_col_one, second_y_col = F,
-                               y_col_two = NULL, rec_avg_line = NULL, 
+make_ts_line_chart <- function(viz_df, x_col, y_col, rec_avg_line = NULL, 
                                non_rec_avg_line = NULL, y_data_type,
                                viz_title = NULL, viz_subtitle, viz_caption) {
+  # TEMPORARY: Creating ad-hoc columns for line size and color
+  viz_df <- viz_df %>% 
+    mutate(linewidth = if_else(date_measure_text == "Current", 0.8, 2.75),
+           color = if_else(date_measure_text == "Current", "#a6cee3", "#1f78b4"))
+  
   # https://www.tidyverse.org/blog/2018/07/ggplot2-tidy-evaluation/
   # Quoting X and Y variables:
   x_col_quo <- enquo(x_col)
-  y_col_one_quo <- enquo(y_col_one)
+  y_col_quo <- enquo(y_col)
   
   viz_title <- make_chart_title(viz_df, viz_title)
   
   # Getting data range to use for annotation calculations
-  data_range <- get_data_range(pull(viz_df, !!y_col_one_quo))
+  data_range <- get_data_range(pull(viz_df, !!y_col_quo))
   
   latest_date_dte <- max(viz_df$date, na.rm = T)
   earliest_date_dte <- min(viz_df$date, na.rm = T)
@@ -321,36 +321,26 @@ make_ts_line_chart <- function(viz_df, x_col, y_col_one, second_y_col = F,
   
   
   # Base plt
-  plt <- ggplot(viz_df, mapping = aes(x = !!x_col_quo)) +
+  plt <- ggplot(viz_df, mapping = aes(x = !!x_col_quo, y = !!y_col_quo)) +
     coord_cartesian(
       xlim = c(earliest_date_dte, latest_date_dte),
       clip = "off") +
-    geom_line(mapping = aes(y = !!y_col_one_quo),
-              linewidth = 2.75,
-              color = "#1f78b4", 
+    geom_line(mapping = aes(linewidth = linewidth, color = color),
               lineend = "round",
               linejoin = "bevel") +
     scale_x_date(date_labels = "%b. '%y") +
+    scale_linewidth_identity() +
+    scale_color_identity() +
+    guides(
+      color = "none",
+      linewidth = "none"
+    ) +
     labs(
       title = viz_title,
       subtitle = viz_subtitle,
       caption = viz_caption_full
     ) +
     ts_line_theme()
-  
-  # Adding in second smaller line if specified
-  if (second_y_col) {
-    y_col_two_quo <- enquo(y_col_two)
-    # Replacing the data range with the more volatile mom annualized column
-    second_line_data_range <- get_data_range(pull(viz_df, !!y_col_two_quo))
-    data_range <- range(data_range, second_line_data_range)
-    plt <- plt + geom_line(mapping = aes(y = !!y_col_two_quo),
-                           linewidth = 0.8,
-                           color = "#a6cee3", 
-                           lineend = "round",
-                           linejoin = "bevel")
-    
-  }
   
   if (!is.null(non_rec_avg_line)) {
     if (between(non_rec_avg_line, data_range[1], data_range[2])) {
