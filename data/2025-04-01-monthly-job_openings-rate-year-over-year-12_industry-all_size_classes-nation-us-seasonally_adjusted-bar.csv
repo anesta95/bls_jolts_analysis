@@ -1,0 +1,13 @@
+date,date_period_text,value,data_element_text,metric_text,date_measure_text,industry_text,sizeclass_text,geo_entity_type_text,geo_entity_text,seas_adj_text,viz_type_text
+2025-04-01,Monthly,0.2396694214876034,Job Openings,Rate,Year-over-year,Information,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,0.02970297029702973,Job Openings,Rate,Year-over-year,"Trade, transportation, and utilities",All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,0.012121212121211977,Job Openings,Rate,Year-over-year,Professional and business services,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,0,Job Openings,Rate,Year-over-year,Other services,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.07017543859649111,Job Openings,Rate,Year-over-year,Government,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.09589041095890416,Job Openings,Rate,Year-over-year,Total nonfarm,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.13978494623655913,Job Openings,Rate,Year-over-year,Leisure and hospitality,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.15286624203821653,Job Openings,Rate,Year-over-year,Financial activities,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.1717171717171717,Job Openings,Rate,Year-over-year,Private education and health services,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.20512820512820518,Job Openings,Rate,Year-over-year,Manufacturing,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.2890625,Job Openings,Rate,Year-over-year,Construction,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.30400000000000005,Job Openings,Rate,Year-over-year,Mining and logging,All size classes,Nation,US,Seasonally Adjusted,Bar

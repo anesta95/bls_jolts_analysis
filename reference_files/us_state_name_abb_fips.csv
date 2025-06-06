@@ -1,4 +1,4 @@
-state_text,state_abb,fips_code,region_text
+geo_entity_text,state_abb,fips_code,region
 Alaska,AK,02,West
 Idaho,ID,16,West
 Montana,MT,30,West

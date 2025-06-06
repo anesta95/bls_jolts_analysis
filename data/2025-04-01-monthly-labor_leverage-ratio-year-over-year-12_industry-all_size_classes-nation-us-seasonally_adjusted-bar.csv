@@ -1,0 +1,13 @@
+date,date_period_text,value,data_element_text,metric_text,date_measure_text,industry_text,sizeclass_text,geo_entity_type_text,geo_entity_text,seas_adj_text,viz_type_text
+2025-04-01,Monthly,0.13669064748201443,Labor Leverage,Ratio,Year-over-year,Construction,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,0.11384217335058211,Labor Leverage,Ratio,Year-over-year,Leisure and hospitality,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.036363636363636376,Labor Leverage,Ratio,Year-over-year,Manufacturing,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.037486218302094754,Labor Leverage,Ratio,Year-over-year,Private education and health services,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.05965463108320257,Labor Leverage,Ratio,Year-over-year,Financial activities,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.08771929824561397,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.09302325581395354,Labor Leverage,Ratio,Year-over-year,Government,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.11504424778761047,Labor Leverage,Ratio,Year-over-year,Mining and logging,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.17814207650273217,Labor Leverage,Ratio,Year-over-year,Other services,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.19368131868131866,Labor Leverage,Ratio,Year-over-year,"Trade, transportation, and utilities",All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.2092555331991952,Labor Leverage,Ratio,Year-over-year,Professional and business services,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,-0.3538461538461538,Labor Leverage,Ratio,Year-over-year,Information,All size classes,Nation,US,Seasonally Adjusted,Bar
