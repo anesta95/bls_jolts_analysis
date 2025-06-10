@@ -111,7 +111,21 @@ full_jt_df_list <- list_flatten(
 # Iteratively joining each code title reference file onto main data frame with
 # `dplyr::reduce()`
 jolts_full <- reduce(full_jt_df_list, left_join) %>% 
-  mutate(dataelement_text = str_to_title(dataelement_text))
+  mutate(
+    date_period_text = "Monthly",
+    dataelement_text = str_to_title(dataelement_text),
+    geo_entity_type_text = case_when(state_code == "00" ~ "Nation",
+                                     state_code %in% c("MW", "NE", "SO", "WE") ~ "Region",
+                                     T ~ "State"),
+    state_text = if_else(state_text == "Total US", "US", state_text)
+    ) %>% 
+  arrange(series_id, desc(date)) %>% 
+  rename(
+    data_element_text = dataelement_text,
+    metric_text = ratelevel_text,
+    geo_entity_text = state_text,
+    seas_adj_text = seasonal_text
+  )
 
 ### Analysis & Visualizations ###
 ## Time Series Line Graphs ##
@@ -123,6 +137,8 @@ jolts_full <- reduce(full_jt_df_list, left_join) %>%
 # Creating list of data frames of measures that I want to create time-series
 # line graphs for. Removing erroneously named "Ratio" from UO dataelement_text
 # column for "Unemployed to Job Openings Ratio"
+
+##### TODO: Start here renaming variables per specifications in the README.md
 hi_jo_ld_qu_uo_df_list <- jolts_full %>% 
   filter(!is.na(date), 
          seasonal_code == "S",
@@ -133,19 +149,22 @@ hi_jo_ld_qu_uo_df_list <- jolts_full %>%
          dataelement_code %in% c("HI", "JO", "LD", "QU", "UO"),
          ratelevel_code == "R"
   ) %>% 
-  select(date, value, dataelement_text, ratelevel_text, industry_text, state_text, sizeclass_text) %>%
   mutate(
-    dataelement_text = str_remove(dataelement_text, "\\s+Ratio"),
-    val_type_text = "ts_line"
+    data_element_text = str_remove(data_element_text, "\\s+Ratio"),
+    date_measure_text = "Current",
+    viz_type_text = "Time series line"
     ) %>%
-  group_split(dataelement_text, .keep = T)
+  select(date, date_period_text, value, data_element_text, metric_text, 
+         date_measure_text, industry_text, sizeclass_text, geo_entity_type_text, 
+         geo_entity_text, seas_adj_text, viz_type_text) %>%
+  group_split(data_element_text, .keep = T)
 
 # Creating list of non-recession averages of all measures in the list of data frames
 hi_jo_ld_qu_uo_non_recession_avg_list <- map(hi_jo_ld_qu_uo_df_list, 
                                              ~get_avg_col_val(
                                                .x, recession_dates, value, "exclusive"))
 
-# Creating list of non-recession averages of all measures in the list of data frames
+# Creating list of recession averages of all measures in the list of data frames
 hi_jo_ld_qu_uo_recession_avg_list <- map(hi_jo_ld_qu_uo_df_list, 
                                              ~get_avg_col_val(
                                                .x, recession_dates, value, "inclusive"))
@@ -157,12 +176,15 @@ hi_jo_ld_qu_uo_avg_list <- map2(
 # Editing data frame list to calculate a trailing three month average column and
 # filter dates to only past five years.
 hi_jo_ld_qu_uo_ts_df_list <- map(hi_jo_ld_qu_uo_df_list, 
-                                 ~make_viz_df_trail_three(.x))
+                                 function(x) {
+                                   df <- make_trail_avg_col(x, 3) %>% 
+                                     filter_recent_dates(48, "month")
+                                 }) 
+  
 
 # Writing out each data frame that will be visualized in a time series chart
 # to a CSV
 walk(hi_jo_ld_qu_uo_ts_df_list, ~econ_csv_write_out(.x, "./data"))
-
 
 # Making a list of ggplot line charts from the list of time series data frames
 hi_jo_ld_qu_uo_ts_viz_list <- map2(
@@ -175,9 +197,7 @@ hi_jo_ld_qu_uo_ts_viz_list <- map2(
     make_ts_line_chart(
       viz_df = x,
       x_col = date,
-      y_col_one = value_trail_three,
-      second_y_col = T,
-      y_col_two = value,
+      y_col = value,
       rec_avg_line = rec_avg,
       non_rec_avg_line = non_rec_avg,
       y_data_type = "number",
@@ -186,7 +206,7 @@ hi_jo_ld_qu_uo_ts_viz_list <- map2(
                           base_viz_caption)
     )
   }
-  )
+)
 
 # Saving list of ggplot line charts to PNGs
 walk(hi_jo_ld_qu_uo_ts_viz_list, ~save_chart(.x))
@@ -202,12 +222,17 @@ ll_df <- jolts_full %>%
          dataelement_code %in% c("QU", "LD"),
          ratelevel_code == "L"
   ) %>% 
-  group_by(date, industry_text, state_text, sizeclass_text) %>% 
-  summarize(value = round(value[dataelement_code == "QU"] / value[dataelement_code == "LD"], 2), .groups = "drop") %>% 
-  mutate(dataelement_text = "Labor Leverage", 
-         ratelevel_text = "Ratio",
-         val_type_text = "ts_line") %>% 
-  relocate(c(value, dataelement_text, ratelevel_text), .after = date)
+  group_by(date, date_period_text, industry_text, sizeclass_text, 
+           geo_entity_type_text, geo_entity_text, seas_adj_text) %>% 
+  summarize(value = round(value[dataelement_code == "QU"] / value[dataelement_code == "LD"], 2), .groups = "drop") %>%
+  arrange(desc(date)) %>% 
+  mutate(data_element_text = "Labor Leverage", 
+         metric_text = "Ratio",
+         date_measure_text = "Current",
+         viz_type_text = "Time series line") %>% 
+  select(date, date_period_text, value, data_element_text, metric_text, 
+         date_measure_text, industry_text, sizeclass_text, geo_entity_type_text, 
+         geo_entity_text, seas_adj_text, viz_type_text)
 
 # Getting non-recession average of labor leverage ratio of from entire range of 
 # JOLTS data
@@ -221,7 +246,8 @@ ll_avg <- c(ll_non_recession_avg, ll_recession_avg)
 
 # Making data frame with column of trailing three-month average of labor leverage
 # ratio
-ll_ts_df <- make_viz_df_trail_three(ll_df)
+ll_ts_df <- make_trail_avg_col(ll_df, 3) %>% 
+  filter_recent_dates(48, "month")
 
 # Writing out labor leverage ratio data frame to CSV
 econ_csv_write_out(ll_ts_df, "./data")
@@ -230,9 +256,7 @@ econ_csv_write_out(ll_ts_df, "./data")
 ll_plt <- make_ts_line_chart(
   viz_df = ll_ts_df,
   x_col = date,
-  y_col_one = value_trail_three,
-  second_y_col = T,
-  y_col_two = value,
+  y_col = value,
   rec_avg_line = ll_avg[2],
   non_rec_avg_line = ll_avg[1],
   y_data_type = "number",
@@ -268,11 +292,15 @@ hi_jo_ld_qu_naics_ss_trail_three_df <- jolts_full %>%
          dataelement_code %in% c("HI", "JO", "LD", "QU"),
          ratelevel_code == "R"
   ) %>% 
-  select(date, value, dataelement_text, ratelevel_text, industry_text, state_text, sizeclass_text) %>%
-  arrange(dataelement_text, industry_text, desc(date)) %>% 
-  group_by(industry_text, dataelement_text) %>% 
+  mutate(date_measure_text = "Current",
+         viz_type_text = "Bar") %>% 
+  arrange(data_element_text, industry_text, desc(date)) %>% 
+  group_by(industry_text, data_element_text) %>% 
   mutate(value = rollmean(value, 3, fill = NA, align = "left"), .after = value) %>% 
-  ungroup()
+  ungroup() %>% 
+  select(date, date_period_text, value, data_element_text, metric_text, 
+         date_measure_text, industry_text, sizeclass_text, geo_entity_type_text, 
+         geo_entity_text, seas_adj_text, viz_type_text)
 
 # Calculating the quits to layoff ratio a.k.a the labor leverage ratio for 
 # each industry supersector
@@ -285,13 +313,19 @@ ll_naics_ss_trail_three_df <- jolts_full %>%
          dataelement_code %in% c("QU", "LD"),
          ratelevel_code == "L"
   ) %>%
-  group_by(industry_text, date, state_text, sizeclass_text) %>%
+  group_by(date, date_period_text, industry_text, sizeclass_text, 
+           geo_entity_type_text, geo_entity_text, seas_adj_text) %>%
   summarize(value = round(value[dataelement_code == "QU"] / value[dataelement_code == "LD"], 2), .groups = "drop") %>%
-  mutate(dataelement_text = "Labor Leverage", 
-         ratelevel_text = "Ratio") %>% 
-  relocate(c(value, dataelement_text, ratelevel_text, industry_text), .after = date) %>% 
-  arrange(dataelement_text, industry_text, desc(date)) %>% 
-  mutate(value = rollmean(value, 3, fill = NA, align = "left"), .after = value)
+  mutate(data_element_text = "Labor Leverage", 
+         metric_text = "Ratio",
+         date_measure_text = "Current",
+         viz_type_text = "Bar") %>% 
+  arrange(data_element_text, industry_text, desc(date)) %>% 
+  mutate(value = rollmean(value, 3, fill = NA, align = "left"), .after = value) %>% 
+  ungroup() %>% 
+  select(date, date_period_text, value, data_element_text, metric_text, 
+         date_measure_text, industry_text, sizeclass_text, geo_entity_type_text, 
+         geo_entity_text, seas_adj_text, viz_type_text)
 
 # Combining labor leverage ratio with other rates
 hi_jo_ld_ll_qu_naics_ss_trail_three_df <- bind_rows(hi_jo_ld_qu_naics_ss_trail_three_df, 
@@ -300,9 +334,8 @@ hi_jo_ld_ll_qu_naics_ss_trail_three_df <- bind_rows(hi_jo_ld_qu_naics_ss_trail_t
 # Filtering for a data frame of only the most recent month of data
 hi_jo_ld_ll_qu_naics_ss_cur_df_list <- hi_jo_ld_ll_qu_naics_ss_trail_three_df %>% 
   filter(date == max(date, na.rm = T)) %>% 
-  arrange(dataelement_text, desc(value)) %>% 
-  mutate(val_type_text = "cur_bar") %>% 
-  group_split(dataelement_text, .keep = T)
+  arrange(data_element_text, desc(value)) %>% 
+  group_split(data_element_text, .keep = T)
 
 # Writing out each most recent date data frame that will be visualized in a bar chart
 # to a CSV
@@ -326,17 +359,19 @@ walk(hi_jo_ld_ll_qu_naics_ss_cur_viz_list, ~save_chart(.x))
 ## Year-over-year 3 Month Trailing Average Bar Graph ##
 hi_jo_ld_ll_qu_naics_ss_yoy_df_list <- hi_jo_ld_ll_qu_naics_ss_trail_three_df %>% 
   filter(date %in% c(max(date, na.rm = T), max(date, na.rm = T) %m-% months(12))) %>% 
-  group_by(dataelement_text, industry_text, ratelevel_text, state_text, sizeclass_text) %>% 
+  group_by(date_period_text, data_element_text, metric_text, industry_text, sizeclass_text, 
+           geo_entity_type_text, geo_entity_text, seas_adj_text, viz_type_text) %>%
   summarize(
     value = (value[date == max(date)] / value[date != max(date)]) - 1,
     date = max(date),
+    date_measure_text = "Year-over-year",
     .groups = "drop",
   ) %>% 
-  relocate(c(date, value), .before = dataelement_text) %>% 
-  relocate(ratelevel_text, .after = dataelement_text) %>% 
-  mutate(val_type_text = "yoy_bar") %>% 
-  arrange(dataelement_text, desc(value)) %>% 
-  group_split(dataelement_text, .keep = T)
+  select(date, date_period_text, value, data_element_text, metric_text, 
+         date_measure_text, industry_text, sizeclass_text, geo_entity_type_text, 
+         geo_entity_text, seas_adj_text, viz_type_text) %>% 
+  arrange(data_element_text, desc(value)) %>% 
+  group_split(data_element_text, .keep = T)
 
 # Writing out each year-over-year change by NAICS supersector to CSV
 walk(hi_jo_ld_ll_qu_naics_ss_yoy_df_list, ~econ_csv_write_out(.x, "./data"))
@@ -362,7 +397,7 @@ walk(hi_jo_ld_ll_qu_naics_ss_yoy_viz_list, ~save_chart(.x))
 us_states_and_dc_shp <- st_read(
   "./shapefiles/us_states_and_dc_with_ak_hi_resized_bottom_shifted.geojson"
 ) %>% 
-  rename(state_text = NAME)
+  rename(geo_entity_text = NAME)
 
 # Filtering to only the 50 US states + DC for hires rate, job opening rate,
 # layoffs and discharges rate, and quits rate.
@@ -375,11 +410,15 @@ hi_jo_ld_qu_state_trail_three_df <- jolts_full %>%
          dataelement_code %in% c("HI", "JO", "LD", "QU"),
          ratelevel_code == "R"
   ) %>% 
-  select(date, value, dataelement_text, ratelevel_text, industry_text, state_text, sizeclass_text) %>%
-  arrange(dataelement_text, state_text, desc(date)) %>% 
-  group_by(state_text, dataelement_text) %>% 
-  mutate(value = rollmean(value, 3, fill = NA, align = "left"), .after = value) %>% 
-  ungroup()
+  arrange(data_element_text, geo_entity_text, desc(date)) %>% 
+  group_by(geo_entity_text, data_element_text) %>% 
+  mutate(value = rollmean(value, 3, fill = NA, align = "left"),
+         date_measure_text = "Current",
+         viz_type_text = "Map") %>% 
+  ungroup() %>% 
+  select(date, date_period_text, value, data_element_text, metric_text, 
+         date_measure_text, industry_text, sizeclass_text, geo_entity_type_text, 
+         geo_entity_text, seas_adj_text, viz_type_text)
 
 # Calculating the quits to layoff ratio a.k.a the labor leverage ratio for 
 # each state
@@ -392,13 +431,18 @@ ll_state_trail_three_df <- jolts_full %>%
          dataelement_code %in% c("QU", "LD"),
          ratelevel_code == "L"
   ) %>%
-  group_by(date, industry_text, state_text, sizeclass_text) %>%
+  group_by(date, date_period_text, industry_text, sizeclass_text, 
+           geo_entity_type_text, geo_entity_text, seas_adj_text) %>%
   summarize(value = round(value[dataelement_code == "QU"] / value[dataelement_code == "LD"], 2), .groups = "drop") %>%
-  mutate(dataelement_text = "Labor Leverage", 
-         ratelevel_text = "Ratio") %>% 
-  relocate(c(value, dataelement_text, ratelevel_text, industry_text), .after = date) %>% 
-  arrange(dataelement_text, state_text, desc(date)) %>% 
-  mutate(value = rollmean(value, 3, fill = NA, align = "left"), .after = value)
+  mutate(data_element_text = "Labor Leverage", 
+         metric_text = "Ratio",
+         date_measure_text = "Current",
+         viz_type_text = "Map") %>% 
+  arrange(data_element_text, geo_entity_text, desc(date)) %>% 
+  mutate(value = rollmean(value, 3, fill = NA, align = "left"), .after = value) %>% 
+  select(date, date_period_text, value, data_element_text, metric_text, 
+         date_measure_text, industry_text, sizeclass_text, geo_entity_type_text, 
+         geo_entity_text, seas_adj_text, viz_type_text)
 
 # Combining labor leverage ratio with other rates
 hi_jo_ld_ll_qu_state_trail_three_df <- bind_rows(hi_jo_ld_qu_state_trail_three_df, 
@@ -407,9 +451,8 @@ hi_jo_ld_ll_qu_state_trail_three_df <- bind_rows(hi_jo_ld_qu_state_trail_three_d
 # Filtering for a data frame of only the most recent month of data
 hi_jo_ld_ll_qu_state_cur_df_list <- hi_jo_ld_ll_qu_state_trail_three_df %>% 
   filter(date == max(date, na.rm = T)) %>% 
-  arrange(dataelement_text, desc(value)) %>% 
-  mutate(val_type_text = "cur_map") %>% 
-  group_split(dataelement_text, .keep = T)
+  arrange(data_element_text, desc(value)) %>% 
+  group_split(data_element_text, .keep = T)
 
 # Writing out each data frame that will be visualized in a map to a CSV
 walk(hi_jo_ld_ll_qu_state_cur_df_list, ~econ_csv_write_out(.x, "./data"))
@@ -426,8 +469,9 @@ hi_jo_ld_ll_qu_state_cur_viz_list <- map(
     viz_subtitle = "Trailing 3 month average.",
     viz_caption = base_viz_caption
     
-    )
   )
+)
+
 
 # Saving the list of ggplot maps to PNGs
 walk(hi_jo_ld_ll_qu_state_cur_viz_list, ~save_chart(.x))
@@ -437,17 +481,19 @@ walk(hi_jo_ld_ll_qu_state_cur_viz_list, ~save_chart(.x))
 # each rate by state.
 hi_jo_ld_ll_qu_state_yoy_df_list <- hi_jo_ld_ll_qu_state_trail_three_df %>% 
   filter(date %in% c(max(date, na.rm = T), max(date, na.rm = T) %m-% months(12))) %>% 
-  group_by(dataelement_text, industry_text, ratelevel_text, state_text, sizeclass_text) %>% 
+  group_by(date_period_text, data_element_text, metric_text, industry_text, sizeclass_text, 
+           geo_entity_type_text, geo_entity_text, seas_adj_text, viz_type_text) %>%
   summarize(
     value = (value[date == max(date)] / value[date != max(date)]) - 1,
     date = max(date),
+    date_measure_text = "Year-over-year",
     .groups = "drop",
   ) %>% 
-  relocate(c(date, value), .before = dataelement_text) %>% 
-  relocate(ratelevel_text, .after = dataelement_text) %>% 
-  mutate(val_type_text = "yoy_map") %>% 
-  arrange(dataelement_text, desc(value)) %>% 
-  group_split(dataelement_text, .keep = T)
+  select(date, date_period_text, value, data_element_text, metric_text, 
+         date_measure_text, industry_text, sizeclass_text, geo_entity_type_text, 
+         geo_entity_text, seas_adj_text, viz_type_text) %>% 
+  arrange(data_element_text, desc(value)) %>% 
+  group_split(data_element_text, .keep = T)
 
 # Writing out each year-over-year change by state to CSV
 walk(hi_jo_ld_ll_qu_state_yoy_df_list, ~econ_csv_write_out(.x, "./data"))
@@ -472,16 +518,19 @@ walk(hi_jo_ld_ll_qu_state_yoy_viz_list, ~save_chart(.x))
 ## Quits Rate & Layoffs and Discharges Rate Scatter Plot ##
 # Filtering list of current rate dataframes to only Layoffs and Discharges and Quits
 ld_qu_state_cur_df <- hi_jo_ld_ll_qu_state_cur_df_list %>% 
-  keep(\(x) unique(x$dataelement_text) %in% c("Layoffs And Discharges", "Quits")) %>% 
+  keep(\(x) unique(x$data_element_text) %in% c("Layoffs And Discharges", "Quits")) %>% 
   list_rbind() %>% 
-  mutate(dataelement_text = paste(str_remove(dataelement_text, "\\s+And\\s+Discharges"), "Rate")) %>% 
-  select(date, value, dataelement_text, state_text) %>% 
-  pivot_wider(names_from = dataelement_text, values_from = value) %>% 
+  mutate(data_element_text = paste(str_remove(data_element_text, "\\s+And\\s+Discharges"), "Rate")) %>% 
+  select(date, value, data_element_text, geo_entity_text) %>% 
+  pivot_wider(names_from = data_element_text, values_from = value) %>% 
   inner_join(us_state_name_abb_fips) %>% 
-  mutate(dataelement_text = "Labor Leverage",
-         ratelevel_text = "Ratio", 
-         .after = date) %>% 
-  mutate(val_type_text = "cur_scatter")
+  mutate(date_period_text = "Monthly",
+         data_element_text = "Labor Leverage",
+         metric_text = "Ratio", 
+         date_measure_text = "Current",
+         geo_entity_type_text = "State",
+         viz_type_text = "Scatter") %>% 
+  relocate(geo_entity_text, .after = geo_entity_type_text)
 
 # Getting most recent state JOLTS data month to use to filter national
 # data for the same month to put as reference dashed line in the scatter plot.
@@ -489,15 +538,15 @@ latest_state_date <- unique(ld_qu_state_cur_df$date)
 
 # Getting national Layoffs & Discharges & Quits Rates
 national_ld_for_states <- hi_jo_ld_qu_uo_ts_df_list %>% 
-  keep(\(x) unique(x$dataelement_text) == "Layoffs And Discharges") %>% 
+  keep(\(x) unique(x$data_element_text) == "Layoffs And Discharges") %>% 
   nth(1) %>% 
-  filter(date == latest_state_date) %>% 
+  filter(date == latest_state_date, str_detect(date_measure_text, "\\d{1,}")) %>% 
   pull(value)
 
 national_qu_for_states <- hi_jo_ld_qu_uo_ts_df_list %>% 
-  keep(\(x) unique(x$dataelement_text) == "Quits") %>% 
+  keep(\(x) unique(x$data_element_text) == "Quits") %>% 
   nth(1) %>% 
-  filter(date == latest_state_date) %>% 
+  filter(date == latest_state_date, str_detect(date_measure_text, "\\d{1,}")) %>% 
   pull(value)
 
 # Writing out labor leverage ratio by state scatter plot data frame to CSV
@@ -508,7 +557,7 @@ ld_qu_state_cur_plt <- make_state_scatter(
   viz_df = ld_qu_state_cur_df,
   x_col = `Quits Rate`,
   y_col = `Layoffs Rate`,
-  color_col = region_text,
+  color_col = region,
   label_col = state_abb,
   x_intercept = national_qu_for_states,
   y_intercept = national_ld_for_states,
@@ -518,7 +567,7 @@ ld_qu_state_cur_plt <- make_state_scatter(
     "Dashed lines are national averages.",
     base_viz_caption
   )
-  )
+)
 
 # Saving labor leverage ratio by state scatter plot to PNG
 save_chart(ld_qu_state_cur_plt)

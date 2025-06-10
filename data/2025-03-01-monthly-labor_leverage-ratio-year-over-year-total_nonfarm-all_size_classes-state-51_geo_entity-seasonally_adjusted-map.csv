@@ -1,0 +1,52 @@
+date,date_period_text,value,data_element_text,metric_text,date_measure_text,industry_text,sizeclass_text,geo_entity_type_text,geo_entity_text,seas_adj_text,viz_type_text
+2025-03-01,Monthly,0.334008097165992,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Minnesota,Seasonally Adjusted,Map
+2025-03-01,Monthly,0.14150943396226423,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Florida,Seasonally Adjusted,Map
+2025-03-01,Monthly,0.1195965417867435,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Oklahoma,Seasonally Adjusted,Map
+2025-03-01,Monthly,0.09438202247191008,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,New Hampshire,Seasonally Adjusted,Map
+2025-03-01,Monthly,0.09207708779443258,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Vermont,Seasonally Adjusted,Map
+2025-03-01,Monthly,0.08744038155802869,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Pennsylvania,Seasonally Adjusted,Map
+2025-03-01,Monthly,0.08424908424908417,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,New York,Seasonally Adjusted,Map
+2025-03-01,Monthly,0.08307692307692305,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Kansas,Seasonally Adjusted,Map
+2025-03-01,Monthly,0.05688073394495419,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Michigan,Seasonally Adjusted,Map
+2025-03-01,Monthly,0.02450980392156854,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Illinois,Seasonally Adjusted,Map
+2025-03-01,Monthly,0.02272727272727293,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Alabama,Seasonally Adjusted,Map
+2025-03-01,Monthly,0.01972386587771191,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Maine,Seasonally Adjusted,Map
+2025-03-01,Monthly,0.011844331641285955,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Oregon,Seasonally Adjusted,Map
+2025-03-01,Monthly,0.01098901098901095,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,South Dakota,Seasonally Adjusted,Map
+2025-03-01,Monthly,0.004201680672269115,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Missouri,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.008237232289950547,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Iowa,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.010370370370370363,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,North Carolina,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.011984021304926706,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,South Carolina,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.01730103806228367,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Nebraska,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.017713365539452464,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Indiana,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.02447552447552459,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Arizona,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.026587887740029625,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Wisconsin,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.03305785123966953,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Wyoming,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.0357142857142857,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,North Dakota,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.03933434190620266,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Louisiana,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.05645161290322587,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Massachusetts,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.0565045992115637,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Tennessee,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.05742574257425748,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Connecticut,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.058430717863105275,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,California,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.06548431105047758,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Mississippi,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.0657051282051282,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Delaware,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.07594936708860767,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Arkansas,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.10091743119266061,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Maryland,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.11967213114754094,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,New Mexico,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.1298904538341158,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Idaho,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.13455149501661146,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Hawaii,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.13481481481481494,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Virginia,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.14163090128755373,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Rhode Island,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.14814814814814814,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Ohio,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.1635338345864662,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Nevada,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.16824644549763024,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,New Jersey,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.17490494296577952,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,West Virginia,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.18836140888208275,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Utah,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.2091152815013405,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,District of Columbia,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.2141592920353984,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Washington,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.21652892561983483,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Montana,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.23838630806845984,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Texas,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.29027777777777786,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Alaska,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.2931937172774869,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Kentucky,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.3074027603513174,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Georgia,Seasonally Adjusted,Map
+2025-03-01,Monthly,-0.35812672176308535,Labor Leverage,Ratio,Year-over-year,Total nonfarm,All size classes,State,Colorado,Seasonally Adjusted,Map

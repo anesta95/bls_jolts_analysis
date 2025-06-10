@@ -1,0 +1,13 @@
+date,date_period_text,value,data_element_text,metric_text,date_measure_text,industry_text,sizeclass_text,geo_entity_type_text,geo_entity_text,seas_adj_text,viz_type_text
+2025-04-01,Monthly,1.9000000000000001,Layoffs And Discharges,Rate,Current,Construction,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,1.8666666666666665,Layoffs And Discharges,Rate,Current,Professional and business services,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,1.4333333333333333,Layoffs And Discharges,Rate,Current,Leisure and hospitality,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,1.2333333333333334,Layoffs And Discharges,Rate,Current,Information,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,1.1333333333333335,Layoffs And Discharges,Rate,Current,"Trade, transportation, and utilities",All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,1.0666666666666667,Layoffs And Discharges,Rate,Current,Total nonfarm,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,1.0333333333333334,Layoffs And Discharges,Rate,Current,Mining and logging,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,1,Layoffs And Discharges,Rate,Current,Other services,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,0.8666666666666667,Layoffs And Discharges,Rate,Current,Manufacturing,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,0.7000000000000001,Layoffs And Discharges,Rate,Current,Financial activities,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,0.7000000000000001,Layoffs And Discharges,Rate,Current,Private education and health services,All size classes,Nation,US,Seasonally Adjusted,Bar
+2025-04-01,Monthly,0.3666666666666667,Layoffs And Discharges,Rate,Current,Government,All size classes,Nation,US,Seasonally Adjusted,Bar
