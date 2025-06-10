@@ -63,10 +63,10 @@ Data and visualization files will be named in the following order:
 #### Examples
 
 _These need to be updated with new data variables_
-* CSV file: `2024-11-01-hires-rate-monthly-cur-national-total_us-total_nonfarm-all_size_classes-ts_line.csv`
-* PNG file: `2024-11-01-hires-rate-monthly-cur-national-total_us-total_nonfarm-all_size_classes-ts_line.csv`
+* CSV file: `2025-04-01-monthly-unemployed_persons_per_job_opening-rate-2_date_measure-total_nonfarm-all_size_classes-nation-us-seasonally_adjusted-time_series_line.csv`
+* PNG file: `2025-04-01-monthly-unemployed_persons_per_job_opening-rate-2_date_measure-total_nonfarm-all_size_classes-nation-us-seasonally_adjusted-time_series_line.png`
 
-Every column in the dataset with the `_text` suffix will be included in the filename, in addition to the `date` column. Data files will also include columns that have further information that is _not_ needed to uniquely identify the data series. Examples of this include the `value` column or any columns with the `value_` prefix, variables with the `_code` suffix such as `industry_code`, `fips_code`,`preliminary_code`, as well as `moe`, and `moe_level`, among others. 
+Every column in the dataset with the `_text` suffix will be included in the filename, in addition to the `date` column. Data files will also include columns that have further information that is _not_ needed to uniquely identify the data series. Examples of this include the `value` column, variables with the `_code` suffix such as `industry_code`, `fips_code`,`preliminary_code`, as well as `moe`, and `moe_level`, among others. 
 
 This specific repository will have data with the following variables:
 ### Included data
