@@ -1,0 +1,13 @@
+date,date_period_text,value,data_element_text,data_measure_text,date_measure_text,data_transform_text,geo_entity_type_text,geo_entity_text,industry_text,sizeclass_text,seas_adj_text,viz_type_text
+2025-04-01,Monthly,0.19047619047619047,Quits,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Other services,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,0.0769230769230771,Quits,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Financial activities,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,0.034482758620689724,Quits,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Construction,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,0.03333333333333344,Quits,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Mining and logging,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,0,Quits,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Government,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,-0.05128205128205132,Quits,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Professional and business services,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,-0.05555555555555547,Quits,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Leisure and hospitality,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,-0.05633802816901423,Quits,Rate,Year-over-year,Trail 3;Percent change,Nation,US,"Trade, transportation, and utilities",All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,-0.06153846153846154,Quits,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,-0.09375,Quits,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Private education and health services,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,-0.10416666666666663,Quits,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Manufacturing,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,-0.2093023255813954,Quits,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Information,All size classes,Seasonally adjusted,Bar

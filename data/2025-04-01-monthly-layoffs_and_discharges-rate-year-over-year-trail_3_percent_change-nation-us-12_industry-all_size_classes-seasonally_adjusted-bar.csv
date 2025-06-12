@@ -1,0 +1,13 @@
+date,date_period_text,value,data_element_text,data_measure_text,date_measure_text,data_transform_text,geo_entity_type_text,geo_entity_text,industry_text,sizeclass_text,seas_adj_text,viz_type_text
+2025-04-01,Monthly,0.4285714285714284,Layoffs and discharges,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Other services,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,0.2758620689655171,Layoffs and discharges,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Information,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,0.1724137931034484,Layoffs and discharges,Rate,Year-over-year,Trail 3;Percent change,Nation,US,"Trade, transportation, and utilities",All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,0.16666666666666674,Layoffs and discharges,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Professional and business services,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,0.10526315789473673,Layoffs and discharges,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Financial activities,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,0.06896551724137923,Layoffs and discharges,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Mining and logging,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,0.032258064516129004,Layoffs and discharges,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,-0.045454545454545414,Layoffs and discharges,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Private education and health services,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,-0.08333333333333348,Layoffs and discharges,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Government,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,-0.10344827586206895,Layoffs and discharges,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Manufacturing,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,-0.12244897959183654,Layoffs and discharges,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Leisure and hospitality,All size classes,Seasonally adjusted,Bar
+2025-04-01,Monthly,-0.12307692307692297,Layoffs and discharges,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Construction,All size classes,Seasonally adjusted,Bar
