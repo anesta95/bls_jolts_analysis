@@ -1,0 +1,52 @@
+date,Layoffs Rate,Quits Rate,state_abb,fips_code,region,date_period_text,data_element_text,data_measure_text,date_measure_text,data_transform_text,geo_entity_type_text,geo_entity_text,viz_type_text
+2025-03-01,2.1666666666666665,2.1666666666666665,RI,44,Northeast,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Rhode Island,Scatter
+2025-03-01,1.9666666666666666,3.033333333333333,MT,30,West,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Montana,Scatter
+2025-03-01,1.9000000000000001,2.966666666666667,AK,02,West,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Alaska,Scatter
+2025-03-01,1.5999999999999999,2.3333333333333335,NV,32,West,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Nevada,Scatter
+2025-03-01,1.5333333333333332,2.8000000000000003,ID,16,West,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Idaho,Scatter
+2025-03-01,1.4666666666666668,2.8000000000000003,WY,56,West,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Wyoming,Scatter
+2025-03-01,1.4000000000000001,1.5999999999999999,NJ,34,Northeast,Monthly,Labor leverage,Ratio,Current,Trail 3,State,New Jersey,Scatter
+2025-03-01,1.4000000000000001,2.533333333333333,ND,38,Midwest,Monthly,Labor leverage,Ratio,Current,Trail 3,State,North Dakota,Scatter
+2025-03-01,1.4000000000000001,2.3333333333333335,VT,50,Northeast,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Vermont,Scatter
+2025-03-01,1.3666666666666665,2.3333333333333335,ME,23,Northeast,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Maine,Scatter
+2025-03-01,1.3666666666666665,2.3666666666666667,UT,49,West,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Utah,Scatter
+2025-03-01,1.3333333333333333,2.1,CO,08,West,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Colorado,Scatter
+2025-03-01,1.3333333333333333,2.6999999999999997,IN,18,Midwest,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Indiana,Scatter
+2025-03-01,1.2666666666666666,1.9666666666666668,CT,09,Northeast,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Connecticut,Scatter
+2025-03-01,1.2333333333333334,2.5666666666666664,SD,46,Midwest,Monthly,Labor leverage,Ratio,Current,Trail 3,State,South Dakota,Scatter
+2025-03-01,1.2333333333333334,2.6333333333333333,WV,54,South,Monthly,Labor leverage,Ratio,Current,Trail 3,State,West Virginia,Scatter
+2025-03-01,1.2,2.066666666666667,KY,21,South,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Kentucky,Scatter
+2025-03-01,1.2,2.533333333333333,LA,22,South,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Louisiana,Scatter
+2025-03-01,1.2,1.6333333333333335,MA,25,Northeast,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Massachusetts,Scatter
+2025-03-01,1.2,1.9666666666666668,NH,33,Northeast,Monthly,Labor leverage,Ratio,Current,Trail 3,State,New Hampshire,Scatter
+2025-03-01,1.1666666666666667,2.1999999999999997,AZ,04,West,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Arizona,Scatter
+2025-03-01,1.1666666666666667,2.1,GA,13,South,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Georgia,Scatter
+2025-03-01,1.1666666666666667,2.033333333333333,MI,26,Midwest,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Michigan,Scatter
+2025-03-01,1.1666666666666667,2.066666666666667,NM,35,West,Monthly,Labor leverage,Ratio,Current,Trail 3,State,New Mexico,Scatter
+2025-03-01,1.1666666666666667,2.6333333333333333,TN,47,South,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Tennessee,Scatter
+2025-03-01,1.1333333333333335,1.9666666666666668,HI,15,West,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Hawaii,Scatter
+2025-03-01,1.1,2.3000000000000003,AR,05,South,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Arkansas,Scatter
+2025-03-01,1.0999999999999999,2.1666666666666665,IA,19,Midwest,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Iowa,Scatter
+2025-03-01,1.0999999999999999,2.233333333333333,OR,41,West,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Oregon,Scatter
+2025-03-01,1.0999999999999999,2.066666666666667,VA,51,South,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Virginia,Scatter
+2025-03-01,1.0666666666666667,2.066666666666667,DE,10,South,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Delaware,Scatter
+2025-03-01,1.0666666666666667,1.5666666666666667,WA,53,West,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Washington,Scatter
+2025-03-01,1.0333333333333334,2.3333333333333335,KS,20,Midwest,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Kansas,Scatter
+2025-03-01,1.0333333333333334,2.1333333333333333,OH,39,Midwest,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Ohio,Scatter
+2025-03-01,1.0333333333333334,2.1999999999999997,TX,48,South,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Texas,Scatter
+2025-03-01,1,2.1999999999999997,AL,01,South,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Alabama,Scatter
+2025-03-01,1,2.0666666666666664,IL,17,Midwest,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Illinois,Scatter
+2025-03-01,1,2,MN,27,Midwest,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Minnesota,Scatter
+2025-03-01,1,1.9666666666666668,NE,31,Midwest,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Nebraska,Scatter
+2025-03-01,1,2.433333333333333,SC,45,South,Monthly,Labor leverage,Ratio,Current,Trail 3,State,South Carolina,Scatter
+2025-03-01,0.9666666666666668,1.9000000000000001,MD,24,South,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Maryland,Scatter
+2025-03-01,0.9666666666666668,2.033333333333333,WI,55,Midwest,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Wisconsin,Scatter
+2025-03-01,0.9666666666666667,2.233333333333333,MS,28,South,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Mississippi,Scatter
+2025-03-01,0.9333333333333332,1.8,CA,06,West,Monthly,Labor leverage,Ratio,Current,Trail 3,State,California,Scatter
+2025-03-01,0.9333333333333332,2.066666666666667,NC,37,South,Monthly,Labor leverage,Ratio,Current,Trail 3,State,North Carolina,Scatter
+2025-03-01,0.9,2.1,MO,29,Midwest,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Missouri,Scatter
+2025-03-01,0.8666666666666667,1.7,DC,11,South,Monthly,Labor leverage,Ratio,Current,Trail 3,State,District of Columbia,Scatter
+2025-03-01,0.8666666666666667,2.3000000000000003,OK,40,South,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Oklahoma,Scatter
+2025-03-01,0.8333333333333334,1.5333333333333332,NY,36,Northeast,Monthly,Labor leverage,Ratio,Current,Trail 3,State,New York,Scatter
+2025-03-01,0.7999999999999999,2.533333333333333,FL,12,South,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Florida,Scatter
+2025-03-01,0.7333333333333334,1.6666666666666667,PA,42,Northeast,Monthly,Labor leverage,Ratio,Current,Trail 3,State,Pennsylvania,Scatter

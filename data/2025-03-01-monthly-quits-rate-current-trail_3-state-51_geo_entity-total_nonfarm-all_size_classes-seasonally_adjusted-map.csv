@@ -1,0 +1,52 @@
+date,date_period_text,value,data_element_text,data_measure_text,date_measure_text,data_transform_text,geo_entity_type_text,geo_entity_text,industry_text,sizeclass_text,seas_adj_text,viz_type_text
+2025-03-01,Monthly,3.033333333333333,Quits,Rate,Current,Trail 3,State,Montana,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.966666666666667,Quits,Rate,Current,Trail 3,State,Alaska,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.8000000000000003,Quits,Rate,Current,Trail 3,State,Idaho,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.8000000000000003,Quits,Rate,Current,Trail 3,State,Wyoming,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.6999999999999997,Quits,Rate,Current,Trail 3,State,Indiana,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.6333333333333333,Quits,Rate,Current,Trail 3,State,Tennessee,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.6333333333333333,Quits,Rate,Current,Trail 3,State,West Virginia,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.5666666666666664,Quits,Rate,Current,Trail 3,State,South Dakota,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.533333333333333,Quits,Rate,Current,Trail 3,State,Florida,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.533333333333333,Quits,Rate,Current,Trail 3,State,Louisiana,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.533333333333333,Quits,Rate,Current,Trail 3,State,North Dakota,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.433333333333333,Quits,Rate,Current,Trail 3,State,South Carolina,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.3666666666666667,Quits,Rate,Current,Trail 3,State,Utah,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.3333333333333335,Quits,Rate,Current,Trail 3,State,Kansas,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.3333333333333335,Quits,Rate,Current,Trail 3,State,Maine,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.3333333333333335,Quits,Rate,Current,Trail 3,State,Nevada,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.3333333333333335,Quits,Rate,Current,Trail 3,State,Vermont,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.3000000000000003,Quits,Rate,Current,Trail 3,State,Arkansas,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.3000000000000003,Quits,Rate,Current,Trail 3,State,Oklahoma,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.233333333333333,Quits,Rate,Current,Trail 3,State,Mississippi,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.233333333333333,Quits,Rate,Current,Trail 3,State,Oregon,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.1999999999999997,Quits,Rate,Current,Trail 3,State,Alabama,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.1999999999999997,Quits,Rate,Current,Trail 3,State,Arizona,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.1999999999999997,Quits,Rate,Current,Trail 3,State,Texas,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.1666666666666665,Quits,Rate,Current,Trail 3,State,Iowa,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.1666666666666665,Quits,Rate,Current,Trail 3,State,Rhode Island,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.1333333333333333,Quits,Rate,Current,Trail 3,State,Ohio,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.1,Quits,Rate,Current,Trail 3,State,Colorado,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.1,Quits,Rate,Current,Trail 3,State,Georgia,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.1,Quits,Rate,Current,Trail 3,State,Missouri,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.066666666666667,Quits,Rate,Current,Trail 3,State,Delaware,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.066666666666667,Quits,Rate,Current,Trail 3,State,Kentucky,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.066666666666667,Quits,Rate,Current,Trail 3,State,New Mexico,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.066666666666667,Quits,Rate,Current,Trail 3,State,North Carolina,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.066666666666667,Quits,Rate,Current,Trail 3,State,Virginia,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.0666666666666664,Quits,Rate,Current,Trail 3,State,Illinois,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.033333333333333,Quits,Rate,Current,Trail 3,State,Michigan,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2.033333333333333,Quits,Rate,Current,Trail 3,State,Wisconsin,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,2,Quits,Rate,Current,Trail 3,State,Minnesota,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,1.9666666666666668,Quits,Rate,Current,Trail 3,State,Connecticut,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,1.9666666666666668,Quits,Rate,Current,Trail 3,State,Hawaii,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,1.9666666666666668,Quits,Rate,Current,Trail 3,State,Nebraska,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,1.9666666666666668,Quits,Rate,Current,Trail 3,State,New Hampshire,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,1.9000000000000001,Quits,Rate,Current,Trail 3,State,Maryland,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,1.8,Quits,Rate,Current,Trail 3,State,California,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,1.7,Quits,Rate,Current,Trail 3,State,District of Columbia,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,1.6666666666666667,Quits,Rate,Current,Trail 3,State,Pennsylvania,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,1.6333333333333335,Quits,Rate,Current,Trail 3,State,Massachusetts,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,1.5999999999999999,Quits,Rate,Current,Trail 3,State,New Jersey,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,1.5666666666666667,Quits,Rate,Current,Trail 3,State,Washington,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-03-01,Monthly,1.5333333333333332,Quits,Rate,Current,Trail 3,State,New York,Total nonfarm,All size classes,Seasonally adjusted,Map
