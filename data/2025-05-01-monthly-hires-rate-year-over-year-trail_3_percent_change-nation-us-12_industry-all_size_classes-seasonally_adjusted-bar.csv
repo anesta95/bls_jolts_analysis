@@ -1,0 +1,13 @@
+date,date_period_text,value,data_element_text,data_measure_text,date_measure_text,data_transform_text,geo_entity_type_text,geo_entity_text,industry_text,sizeclass_text,seas_adj_text,viz_type_text
+2025-05-01,Monthly,0.19277108433734935,Hires,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Mining and logging,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,0.12307692307692308,Hires,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Financial activities,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,0.050000000000000266,Hires,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Information,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,0.03977272727272729,Hires,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Leisure and hospitality,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,0.021582733812949728,Hires,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Professional and business services,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,0,Hires,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Other services,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.01904761904761898,Hires,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.036363636363636376,Hires,Rate,Year-over-year,Trail 3;Percent change,Nation,US,"Trade, transportation, and utilities",All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.03875968992248047,Hires,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Construction,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.06382978723404276,Hires,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Government,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.0990099009900991,Hires,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Private education and health services,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.10975609756097571,Hires,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Manufacturing,All size classes,Seasonally adjusted,Bar

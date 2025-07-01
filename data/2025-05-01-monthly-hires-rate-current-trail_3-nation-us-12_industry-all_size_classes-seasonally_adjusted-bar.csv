@@ -1,0 +1,13 @@
+date,date_period_text,value,data_element_text,data_measure_text,date_measure_text,data_transform_text,geo_entity_type_text,geo_entity_text,industry_text,sizeclass_text,seas_adj_text,viz_type_text
+2025-05-01,Monthly,6.1000000000000005,Hires,Rate,Current,Trail 3,Nation,US,Leisure and hospitality,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,4.733333333333333,Hires,Rate,Current,Trail 3,Nation,US,Professional and business services,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,4.133333333333334,Hires,Rate,Current,Trail 3,Nation,US,Construction,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,3.533333333333333,Hires,Rate,Current,Trail 3,Nation,US,"Trade, transportation, and utilities",All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,3.466666666666667,Hires,Rate,Current,Trail 3,Nation,US,Other services,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,3.4333333333333336,Hires,Rate,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,3.3000000000000003,Hires,Rate,Current,Trail 3,Nation,US,Mining and logging,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,3.033333333333333,Hires,Rate,Current,Trail 3,Nation,US,Private education and health services,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,2.8000000000000003,Hires,Rate,Current,Trail 3,Nation,US,Information,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,2.4333333333333336,Hires,Rate,Current,Trail 3,Nation,US,Manufacturing,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,2.433333333333333,Hires,Rate,Current,Trail 3,Nation,US,Financial activities,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,1.4666666666666668,Hires,Rate,Current,Trail 3,Nation,US,Government,All size classes,Seasonally adjusted,Bar

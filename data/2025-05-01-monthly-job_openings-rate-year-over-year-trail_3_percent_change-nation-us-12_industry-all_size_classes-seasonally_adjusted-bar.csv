@@ -1,0 +1,13 @@
+date,date_period_text,value,data_element_text,data_measure_text,date_measure_text,data_transform_text,geo_entity_type_text,geo_entity_text,industry_text,sizeclass_text,seas_adj_text,viz_type_text
+2025-05-01,Monthly,0.2941176470588236,Job openings,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Information,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,0.03726708074534146,Job openings,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Professional and business services,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,0.028368794326241176,Job openings,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Other services,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,0.020202020202020332,Job openings,Rate,Year-over-year,Trail 3;Percent change,Nation,US,"Trade, transportation, and utilities",All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.02298850574712641,Job openings,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Leisure and hospitality,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.03546099290780125,Job openings,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Financial activities,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.0699300699300699,Job openings,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.11734693877551028,Job openings,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Private education and health services,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.134453781512605,Job openings,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Government,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.2268907563025211,Job openings,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Mining and logging,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.22881355932203384,Job openings,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Manufacturing,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.29508196721311475,Job openings,Rate,Year-over-year,Trail 3;Percent change,Nation,US,Construction,All size classes,Seasonally adjusted,Bar

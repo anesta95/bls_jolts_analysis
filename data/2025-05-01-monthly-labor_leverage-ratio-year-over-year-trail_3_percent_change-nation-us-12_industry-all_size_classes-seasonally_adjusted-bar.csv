@@ -1,0 +1,13 @@
+date,date_period_text,value,data_element_text,data_measure_text,date_measure_text,data_transform_text,geo_entity_type_text,geo_entity_text,industry_text,sizeclass_text,seas_adj_text,viz_type_text
+2025-05-01,Monthly,0.25,Labor leverage,Ratio,Year-over-year,Trail 3;Percent change,Nation,US,Financial activities,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,0.24415584415584424,Labor leverage,Ratio,Year-over-year,Trail 3;Percent change,Nation,US,Leisure and hospitality,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.006493506493506662,Labor leverage,Ratio,Year-over-year,Trail 3;Percent change,Nation,US,Private education and health services,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.022260273972602773,Labor leverage,Ratio,Year-over-year,Trail 3;Percent change,Nation,US,Mining and logging,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.04333868378812189,Labor leverage,Ratio,Year-over-year,Trail 3;Percent change,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.04615384615384599,Labor leverage,Ratio,Year-over-year,Trail 3;Percent change,Nation,US,Construction,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.07831325301204839,Labor leverage,Ratio,Year-over-year,Trail 3;Percent change,Nation,US,Manufacturing,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.09339975093399755,Labor leverage,Ratio,Year-over-year,Trail 3;Percent change,Nation,US,Other services,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.1169916434540389,Labor leverage,Ratio,Year-over-year,Trail 3;Percent change,Nation,US,Government,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.12709497206703912,Labor leverage,Ratio,Year-over-year,Trail 3;Percent change,Nation,US,"Trade, transportation, and utilities",All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.16244725738396637,Labor leverage,Ratio,Year-over-year,Trail 3;Percent change,Nation,US,Professional and business services,All size classes,Seasonally adjusted,Bar
+2025-05-01,Monthly,-0.2058823529411764,Labor leverage,Ratio,Year-over-year,Trail 3;Percent change,Nation,US,Information,All size classes,Seasonally adjusted,Bar
