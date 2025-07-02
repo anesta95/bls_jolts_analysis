@@ -62,9 +62,15 @@ Data and visualization files will be named in the following order:
 9. _Any other aspects of the data specific to the release that are needed to uniquely identify it._ Examples include `industry_text`, `size_class_text`, `seas_adj_text`, among others.
 10. `viz_type_text`
 
+For data file and chart names with multiple dates in the `date` field — such as files with a the `viz_type_text` of `Time series line` — the `date` file naming convention will have the most and least recent dates in the data series.
+
 #### Examples
-* CSV file: `2025-04-01-monthly-quits-rate-current-2_data_transform-nation-us-total_nonfarm-all_size_classes-seasonally_adjusted-time_series_line.csv`
-* PNG file: `2025-04-01-monthly-quits-rate-current-2_data_transform-nation-us-total_nonfarm-all_size_classes-seasonally_adjusted-time_series_line.png`
+* CSV files: 
+  * `2025-04-01_2023-04-01-monthly-quits-rate-current-2_data_transform-nation-us-total_nonfarm-all_size_classes-seasonally_adjusted-time_series_line.csv`
+  * `2025-04-01-monthly-job_openings-rate-year-over-year-trail_3_percent_change-nation-us-12_industry-all_size_classes-seasonally_adjusted-bar.csv`
+* PNG files: 
+  * `2025-04-01_2023-04-01-monthly-quits-rate-current-2_data_transform-nation-us-total_nonfarm-all_size_classes-seasonally_adjusted-time_series_line.png`
+  * `2025-04-01-monthly-job_openings-rate-year-over-year-trail_3_percent_change-nation-us-12_industry-all_size_classes-seasonally_adjusted-bar.png`
 
 Every column in the dataset with the `_text` suffix will be included in the filename, in addition to the `date` column. Data files will also include columns that have further information that is _not_ needed to uniquely identify the data series. Examples of this include the `value` column, variables with the `_code` suffix such as `industry_code`, `fips_code`,`preliminary_code`, as well as `moe`, and `moe_level`, among others. 
 
