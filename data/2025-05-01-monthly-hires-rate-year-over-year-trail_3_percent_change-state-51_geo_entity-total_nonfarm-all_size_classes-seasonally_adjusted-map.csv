@@ -1,0 +1,52 @@
+date,date_period_text,value,data_element_text,data_measure_text,date_measure_text,data_transform_text,geo_entity_type_text,geo_entity_text,industry_text,sizeclass_text,seas_adj_text,viz_type_text
+2025-05-01,Monthly,0.2761904761904763,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Colorado,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.21052631578947367,Hires,Rate,Year-over-year,Trail 3;Percent change,State,New York,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.19417475728155353,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Arizona,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.18918918918918903,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Michigan,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.18095238095238075,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Vermont,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.17431192660550465,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Indiana,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.16176470588235303,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Wyoming,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.14000000000000012,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Alaska,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.11458333333333326,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Hawaii,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.08888888888888902,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Washington,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.07228915662650581,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Massachusetts,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.06481481481481488,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Oregon,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.05434782608695654,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Connecticut,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.05319148936170226,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Wisconsin,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.04950495049504933,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Kansas,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.04716981132075482,Hires,Rate,Year-over-year,Trail 3;Percent change,State,New Hampshire,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.04587155963302769,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Kentucky,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.04587155963302747,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Maine,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.0431034482758621,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Utah,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.03191489361702127,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Iowa,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.026086956521739202,Hires,Rate,Year-over-year,Trail 3;Percent change,State,New Mexico,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.025641025641025772,Hires,Rate,Year-over-year,Trail 3;Percent change,State,North Dakota,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.021126760563380254,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Idaho,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.019230769230769162,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Montana,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.009009009009008917,Hires,Rate,Year-over-year,Trail 3;Percent change,State,South Dakota,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Nevada,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.008264462809917328,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Rhode Island,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.010204081632653073,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Minnesota,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.0183486238532109,Hires,Rate,Year-over-year,Trail 3;Percent change,State,New Jersey,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.01941747572815522,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Nebraska,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.021739130434782483,Hires,Rate,Year-over-year,Trail 3;Percent change,State,California,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.02777777777777779,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Ohio,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.0350877192982455,Hires,Rate,Year-over-year,Trail 3;Percent change,State,North Carolina,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.04615384615384599,Hires,Rate,Year-over-year,Trail 3;Percent change,State,South Carolina,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.06666666666666654,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Texas,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.08045977011494254,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Pennsylvania,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.08333333333333337,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Florida,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.08823529411764697,Hires,Rate,Year-over-year,Trail 3;Percent change,State,West Virginia,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.09917355371900827,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Delaware,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.10091743119266039,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Maryland,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.10344827586206906,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Georgia,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.10679611650485443,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Missouri,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.10833333333333339,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Mississippi,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.10937499999999989,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Louisiana,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.11965811965811957,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Alabama,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.11965811965811968,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Illinois,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.1280000000000001,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Arkansas,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.1282051282051282,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Virginia,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.14814814814814825,Hires,Rate,Year-over-year,Trail 3;Percent change,State,District of Columbia,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.20300751879699241,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Oklahoma,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.20740740740740748,Hires,Rate,Year-over-year,Trail 3;Percent change,State,Tennessee,Total nonfarm,All size classes,Seasonally adjusted,Map

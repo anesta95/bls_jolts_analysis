@@ -1,0 +1,52 @@
+date,date_period_text,value,data_element_text,data_measure_text,date_measure_text,data_transform_text,geo_entity_type_text,geo_entity_text,industry_text,sizeclass_text,seas_adj_text,viz_type_text
+2025-05-01,Monthly,0.125,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Minnesota,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.0980392156862746,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Georgia,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.06617647058823528,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,New York,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.050359712230215736,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Kansas,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.04511278195488733,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Ohio,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.024590163934426368,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Iowa,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.020689655172413612,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,New Jersey,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.019230769230769162,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,North Carolina,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.015625,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Nebraska,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.014184397163120588,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Michigan,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,0.006802721088435382,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Vermont,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.007936507936507908,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Nevada,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.01342281879194629,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,North Dakota,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.013986013986013957,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Arizona,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.014598540145985495,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,South Dakota,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.02777777777777779,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,California,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.03289473684210531,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Alabama,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.03378378378378388,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Missouri,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.04166666666666663,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Oklahoma,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.04907975460122693,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Arkansas,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.05442176870748294,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Delaware,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.05755395683453235,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Connecticut,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.06293706293706314,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Wisconsin,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.06493506493506485,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Idaho,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.06790123456790098,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Maine,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.06790123456790131,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Mississippi,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.07284768211920523,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Tennessee,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.07317073170731714,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,District of Columbia,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.07594936708860767,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Rhode Island,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.07627118644067798,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Hawaii,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.07843137254901966,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,New Hampshire,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.07843137254901966,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Wyoming,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.0808823529411764,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Indiana,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.08536585365853644,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Louisiana,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.0862068965517242,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Washington,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.09022556390977454,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Texas,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.09326424870466332,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,West Virginia,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.09629629629629632,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Utah,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.10588235294117654,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Montana,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.11486486486486502,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Pennsylvania,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.11688311688311681,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Maryland,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.12328767123287676,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Oregon,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.12738853503184722,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Massachusetts,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.13450292397660812,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Kentucky,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.1348314606741574,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Alaska,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.14482758620689662,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Florida,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.14689265536723162,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,South Carolina,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.1588235294117648,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Virginia,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.16149068322981375,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Illinois,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.17297297297297287,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,New Mexico,Total nonfarm,All size classes,Seasonally adjusted,Map
+2025-05-01,Monthly,-0.2542372881355932,Job openings,Rate,Year-over-year,Trail 3;Percent change,State,Colorado,Total nonfarm,All size classes,Seasonally adjusted,Map
