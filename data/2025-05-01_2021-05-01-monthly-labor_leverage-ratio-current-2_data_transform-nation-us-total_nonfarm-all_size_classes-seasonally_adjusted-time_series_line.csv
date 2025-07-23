@@ -1,0 +1,99 @@
+date,date_period_text,value,data_element_text,data_measure_text,date_measure_text,data_transform_text,geo_entity_type_text,geo_entity_text,industry_text,sizeclass_text,seas_adj_text,viz_type_text
+2025-05-01,Monthly,2.06,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2025-05-01,Monthly,1.9866666666666666,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2025-04-01,Monthly,1.8,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2025-04-01,Monthly,1.9100000000000001,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2025-03-01,Monthly,2.1,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2025-03-01,Monthly,1.96,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2025-02-01,Monthly,1.83,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2025-02-01,Monthly,1.8766666666666667,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2025-01-01,Monthly,1.95,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2025-01-01,Monthly,1.8466666666666667,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-12-01,Monthly,1.85,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-12-01,Monthly,1.7966666666666666,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-11-01,Monthly,1.74,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-11-01,Monthly,1.7366666666666666,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-10-01,Monthly,1.8,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-10-01,Monthly,1.78,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-09-01,Monthly,1.67,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-09-01,Monthly,1.8266666666666664,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-08-01,Monthly,1.87,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-08-01,Monthly,2.0166666666666666,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-07-01,Monthly,1.94,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-07-01,Monthly,2.066666666666667,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-06-01,Monthly,2.24,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-06-01,Monthly,2.1366666666666667,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-05-01,Monthly,2.02,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-05-01,Monthly,2.0766666666666667,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-04-01,Monthly,2.15,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-04-01,Monthly,2.09,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-03-01,Monthly,2.06,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-03-01,Monthly,2.033333333333333,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-02-01,Monthly,2.06,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-02-01,Monthly,2.026666666666667,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-01-01,Monthly,1.98,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2024-01-01,Monthly,2.1166666666666667,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-12-01,Monthly,2.04,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-12-01,Monthly,2.1866666666666665,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-11-01,Monthly,2.33,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-11-01,Monthly,2.283333333333333,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-10-01,Monthly,2.19,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-10-01,Monthly,2.22,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-09-01,Monthly,2.33,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-09-01,Monthly,2.1999999999999997,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-08-01,Monthly,2.14,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-08-01,Monthly,2.1733333333333333,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-07-01,Monthly,2.13,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-07-01,Monthly,2.34,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-06-01,Monthly,2.25,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-06-01,Monthly,2.3466666666666667,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-05-01,Monthly,2.64,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-05-01,Monthly,2.3,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-04-01,Monthly,2.15,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-04-01,Monthly,2.27,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-03-01,Monthly,2.11,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-03-01,Monthly,2.223333333333333,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-02-01,Monthly,2.55,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-02-01,Monthly,2.4366666666666665,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-01-01,Monthly,2.01,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2023-01-01,Monthly,2.5166666666666666,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-12-01,Monthly,2.75,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-12-01,Monthly,2.6999999999999997,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-11-01,Monthly,2.79,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-11-01,Monthly,2.733333333333333,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-10-01,Monthly,2.56,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-10-01,Monthly,2.6733333333333333,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-09-01,Monthly,2.85,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-09-01,Monthly,2.7366666666666664,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-08-01,Monthly,2.61,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-08-01,Monthly,2.7066666666666666,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-07-01,Monthly,2.75,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-07-01,Monthly,2.776666666666667,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-06-01,Monthly,2.76,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-06-01,Monthly,2.9566666666666666,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-05-01,Monthly,2.82,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-05-01,Monthly,3.1199999999999997,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-04-01,Monthly,3.29,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-04-01,Monthly,3.1933333333333334,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-03-01,Monthly,3.25,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-03-01,Monthly,3.1199999999999997,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-02-01,Monthly,3.04,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-02-01,Monthly,3.0999999999999996,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-01-01,Monthly,3.07,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2022-01-01,Monthly,3.1799999999999997,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2021-12-01,Monthly,3.19,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2021-12-01,Monthly,3.2266666666666666,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2021-11-01,Monthly,3.28,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2021-11-01,Monthly,3.1733333333333333,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2021-10-01,Monthly,3.21,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2021-10-01,Monthly,3.106666666666667,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2021-09-01,Monthly,3.03,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2021-09-01,Monthly,3.0033333333333334,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2021-08-01,Monthly,3.08,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2021-08-01,Monthly,3.016666666666666,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2021-07-01,Monthly,2.9,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2021-07-01,Monthly,2.936666666666666,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2021-06-01,Monthly,3.07,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2021-06-01,Monthly,2.8799999999999994,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2021-05-01,Monthly,2.84,Labor leverage,Ratio,Current,Raw,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
+2021-05-01,Monthly,2.6766666666666663,Labor leverage,Ratio,Current,Trail 3,Nation,US,Total nonfarm,All size classes,Seasonally adjusted,Time series line
